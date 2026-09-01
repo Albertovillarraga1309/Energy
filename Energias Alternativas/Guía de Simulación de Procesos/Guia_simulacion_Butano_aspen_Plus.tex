@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{Guía Paso a Paso para Simular la Combustión del Butano en Aspen Plus}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Objetivo}
+Simular la combustión del butano (\texttt{C\textsubscript{4}H\textsubscript{10}}) con una conversión del 70\% en un reactor adiabático, y analizar el calor liberado y la temperatura de salida del sistema.
+
+\begin{center}
+\fbox{\( 2C_4H_{10} + 13O_2 \rightarrow 8CO_2 + 10H_2O \)}
+\end{center}
+
+\vspace{1em}
+
+\section*{1. Crear un nuevo proyecto}
+\begin{enumerate}
+  \item Abrir Aspen Plus.
+  \item Seleccionar \texttt{Create New | Create New Case}.
+  \item Elegir la plantilla \texttt{General with English Units} o \texttt{Metric}, según preferencia.
+\end{enumerate}
+
+\section*{2. Definir los componentes del sistema}
+Ingresar los siguientes compuestos en \texttt{Properties > Component Lists}:
+\begin{itemize}
+  \item Butano (\texttt{C4H10})
+  \item Oxígeno (\texttt{O2})
+  \item Dióxido de carbono (\texttt{CO2})
+  \item Agua (\texttt{H2O})
+\end{itemize}
+
+\section*{3. Seleccionar el paquete termodinámico}
+En \texttt{Properties > Methods}, seleccionar:
+\begin{itemize}
+  \item Método termodinámico: \texttt{Peng-Robinson (PENG-ROB)} o \texttt{SRK}.
+\end{itemize}
+
+\section*{4. Crear el grupo de reacciones}
+\begin{enumerate}
+  \item En el panel de navegación, seleccionar la opción para crear un nuevo \texttt{Reaction Set}.
+  \item Hacer clic en \texttt{Add Reaction}.
+  \item Seleccionar el tipo de reacción: \texttt{Conversion}.
+  \item Hacer doble clic en \texttt{Rxn-x} para editarla.
+  \item Ingresar los componentes y balancear la reacción química como se muestra en la Figura~\ref{fig:1}.
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Energias Alternativas/Guía de Simulación de Procesos/img/Conversion_reaction.png}
+    \caption{Configuración de la reacción de conversión en Aspen Plus.}
+    \label{fig:1}
+\end{figure}
+
+\section*{5. Configurar el reactor de conversión}
+\begin{itemize}
+  \item Insertar un bloque de tipo \texttt{RStoic} (reactor estequiométrico).
+  \item Conectar tres corrientes: entrada de butano, entrada de oxígeno y salida de productos.
+  \item Asignar la reacción creada al bloque \texttt{RStoic}.
+  \item Marcar la opción \texttt{Adiabático} o establecer el calor intercambiado en cero (Q = 0).
+\end{itemize}
+
+\section*{6. Especificar condiciones de las corrientes}
+\subsection*{Corriente de entrada: Butano}
+\begin{itemize}
+    \item Temperatura: 298 K
+    \item Presión: 1 atm
+    \item Flujo molar: 1 kmol/h
+\end{itemize}
+
+\subsection*{Corriente de entrada: Oxígeno}
+\begin{itemize}
+  \item Flujo molar: 6.5 kmol/h (o 7.0 kmol/h si se desea ligero exceso)
+  \item Temperatura: 298 K
+  \item Presión: 1 atm
+\end{itemize}
+
+\section*{7. Ejecutar la simulación}
+\begin{itemize}
+  \item Hacer clic en el botón \texttt{Run} o presionar \texttt{F5}.
+  \item Esperar el mensaje de confirmación: \texttt{Converged}.
+\end{itemize}
+
+\section*{8. Revisar los resultados}
+\begin{itemize}
+  \item Analizar la corriente de salida: temperatura final, composición molar y conversión.
+  \item Verificar el bloque \texttt{RStoic} para observar la energía liberada por la reacción.
+\end{itemize}
+
+\section*{9. Recurso visual adicional}
+Para obtener una guía práctica en video, consulta el siguiente tutorial sobre la configuración de un reactor de conversión en Aspen Hysys (el procedimiento es similar):
+
+\begin{center}
+\href{https://youtu.be/5GNP5KDei7A}{Ver video: Curso de Aspen Hysys – Reactor de Conversión}
+\end{center}
+
+\section*{10. Análisis complementario}
+\begin{itemize}
+  \item Simular con diferentes porcentajes de conversión (por ejemplo, 50\%, 100\%).
+  \item Incorporar un intercambiador de calor aguas abajo para recuperación de energía.
+ % \item Sustituir el oxígeno por aire real, añadiendo nitrógeno (\texttt{N2}) para una simulación más realista.
+\end{itemize}
+
+\end{document}

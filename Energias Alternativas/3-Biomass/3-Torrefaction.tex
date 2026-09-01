@@ -1,0 +1,2428 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NOTA: Este archivo está diseñado para ser usado con el paquete 'subfiles'.
+% Se asume que el archivo principal (main.tex) carga todos los paquetes
+% necesarios como beamer, babel, siunitx, mhchem, graphicx, booktabs, etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[main.tex]{subfiles}
+
+\input{0-theme/default}
+
+\begin{document}
+
+% ==========================
+\section{Torrefacción}
+% ==========================
+
+% Diapositiva: Introducción a la Torrefacción
+\begin{frame}{Introducción a la Torrefacción}
+\footnotesize
+  \begin{itemize}
+    \item La biomasa puede transformarse en combustibles sólidos, líquidos o gaseosos.
+    \item La carbonización es una práctica milenaria para producir carbón vegetal.
+    \item La \textbf{torrefacción} (del francés "torréfier") es un proceso térmico suave, similar al tostado de café o té.
+    \item Ha despertado interés reciente como pretratamiento para la producción de biocombustibles sólidos.
+  \end{itemize}
+  \begin{block}{Usos del material torrefactado}
+  \justifying
+    \begin{itemize}
+      \item Cofiring con carbón en calderas de gran escala.
+      \item Calefacción descentralizada o residencial.
+      \item Gasificación eficiente y limpia.
+      \item Insumo en la industria química.
+      \item Sustituto del coque en altos hornos (reducción de huella de carbono).
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+
+% Diapositiva: ¿Qué es la torrefacción? (Definición Ampliada)
+\begin{frame}{¿Qué es la torrefacción?}
+  \begin{itemize}
+    \item Aunque no existe una definición universalmente aceptada, se puede describir como:
+      \begin{itemize}
+        \item Un proceso termoquímico en ambiente inerte o con oxígeno limitado.
+        \item La biomasa se calienta lentamente dentro de un rango de \SIrange{200}{300}{\celsius}.
+        \item Se retiene a esa temperatura durante un tiempo estipulado para:
+          \begin{itemize}
+            \item Lograr la degradación casi completa de la hemicelulosa.
+            \item Maximizar el rendimiento en masa y energía del producto sólido.
+          \end{itemize}
+      \end{itemize}
+    \item \textbf{Parámetros y condiciones del proceso:}
+      \begin{itemize}
+        \item \textbf{Rango de temperatura:} \SIrange{200}{300}{\celsius} (Bergman et al., 2005).
+              Temperaturas mayores a \SI{300}{\celsius} pueden causar:
+          \begin{itemize}
+            \item Devolatilización excesiva y carbonización no deseada.
+            \item Pérdida significativa de lignina, dificultando la formación de pellets.
+            \item Formación de alquitrán (tar) por el agudo craqueo térmico de la celulosa (\SIrange{300}{320}{\celsius}, Prins et al., 2006).
+          \end{itemize}
+        \item \textbf{Tasa de calentamiento:} Suficientemente lenta ($< \SI{50}{\celsius\per\minute}$) para favorecer el rendimiento sólido.
+      \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{¿Qué es la torrefacción? (Continuación)}
+  \begin{itemize}
+    \item \textbf{Otros aspectos relevantes:}
+      \begin{itemize}
+        \item La presencia moderada de oxígeno es tolerable e incluso puede ser beneficiosa (Basu et al., 2013; Uemura et al., 2011).
+        \item El objetivo es reducir la naturaleza fibrosa de la biomasa para facilitar su molienda y permitir la formación de pellets sin necesidad de aditivos.
+      \end{itemize}
+
+    \item \textbf{Degradación de componentes de la biomasa:}
+      \begin{itemize}
+        \item \textbf{Hemicelulosa:} Se degrada mayoritariamente a partir de \SI{200}{\celsius} (rango \SIrange{100}{260}{\celsius}).
+        \item \textbf{Celulosa:} Su degradación principal ocurre en el intervalo \SIrange{270}{350}{\celsius} (Chen et al., 2011).
+        \item \textbf{Lignina:} Degradación gradual entre \SIrange{250}{500}{\celsius}, iniciando su ablandamiento a \SIrange{80}{90}{\celsius} (Cielkosz, 2011).
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Diapositiva 2: Cambios físico-químicos
+\begin{frame}{Cambios fisicoquímicos en la biomasa}
+  \begin{itemize}
+    \item Eliminación de \ce{H2O} y \ce{CO2}.
+    \item Disminuyen las relaciones O/C y H/C.
+    \item Aumenta el contenido relativo de carbono.
+    \item La biomasa se vuelve más friable (quebradiza) por la despolimerización de hemicelulosa.
+  \end{itemize}
+  \vspace{0.5em}
+  \begin{alertblock}{Ventaja}
+    Facilita la molienda y reduce el consumo energético.
+  \end{alertblock}
+\end{frame}
+
+% Diapositiva 3: Comparación antes y después
+\begin{frame}{Cambio de masa y energía (Ejemplo con bagazo)}
+  \begin{itemize}
+    \item Pérdida de masa: \SIrange{31}{38}{\percent}.
+    \item Pérdida de energía: \SIrange{11}{17}{\percent}.
+    \item Aumento en densidad energética: \SIrange{29}{33}{\percent}.
+    \item Valor calórico superior (HHV): $\approx \SI{20}{\mega\joule\per\kilogram}$.
+  \end{itemize}
+  \begin{block}{Fuente}
+    \small Pimchua et al., 2009.
+  \end{block}
+\end{frame}
+
+% Diapositiva 4: Hidrofobicidad
+\begin{frame}{Reducción de la higroscopicidad}
+  \begin{itemize}
+    \item La biomasa torrefactada absorbe mucha menos agua.
+    \item Ejemplo: Bagazo crudo absorbe \SI{186}{\percent} de su masa en agua en \SI{2}{\hour}.
+    \item Tras torrefacción (\SI{60}{\minute}, \SI{250}{\celsius}), la absorción se reduce a \SI{7.6}{\percent}.
+  \end{itemize}
+  
+  \begin{block}{Aplicaciones y beneficios energéticos}
+    \begin{itemize}
+      \item Combustión conjunta en calderas de carbón pulverizado.
+      \item Gasificación eficiente en reactores de flujo arrastrado.
+      \item Menores pérdidas termodinámicas por menor contenido de oxígeno.
+      \item Biomasa más homogénea y densa energéticamente.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+% Diapositiva 6: Gráfica y fotografías
+\begin{frame}{Ejemplos visuales de torrefacción}
+  \begin{itemize}
+    \item Cambio visible de color tras la torrefacción.
+    \item Afecta diversos tipos: cáscara de arroz, maní, bagazo, jacinto de agua.
+  \end{itemize}
+  \begin{block}{Factores que afectan la torrefacción}
+    \begin{itemize}
+      \item Tipo de biomasa (leñosa o herbácea).
+      \item Temperatura y duración del proceso.
+      \item Diseño del reactor y atmósfera controlada.
+    \end{itemize}
+  \end{block}
+  \vspace{0.5em}
+  \textbf{Importante:} La optimización del proceso mejora la eficiencia energética.
+\end{frame}
+
+\begin{frame}{Ejemplos Visuales}
+    \begin{figure}
+        \centering
+        % Reemplaza con la ruta a tu imagen
+        \includegraphics[width=0.6\linewidth]{Energias Alternativas/3-Biomass/img/ejemplos_torrefaccion.png}
+        \caption{Ejemplos de biomasa antes y después de la torrefacción.}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Comparación de Procesos Térmicos de Biomasa}
+\begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+        \tiny
+        \begin{table}
+          \centering
+          \caption{Comparación de procesos térmicos.}
+          \begin{tabular}{@{}llll@{}}
+            \toprule
+            \textbf{Proceso} & \textbf{Temp. (\si{\celsius})} & \textbf{Tiempo} & \textbf{Producto} \\
+            \midrule
+            \textbf{Torrefacción} & 200–300 & Minutos & Sólido \\
+            \textbf{Pirólisis} & 300–600 & Seg.–min. & Líquidos \\
+            \textbf{Carbonización} & 400–900 & Horas & Carbón \\
+            \bottomrule
+          \end{tabular}
+        \end{table}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+        \begin{figure}
+          \centering
+          % Reemplaza con la ruta a tu imagen
+          \includegraphics[width=\linewidth]{Energias Alternativas/3-Biomass/img/grafica_procesos_biomasa.png}
+          \captionof{figure}{\tiny Procesos térmicos.}
+        %  \label{fig:procesos-termicos}
+        \end{figure}
+    \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Proceso de torrefacción}
+  \begin{itemize}
+    \item \textbf{Torrefacción seca:} método comercial más común, usa gases inertes o calentamiento indirecto.
+    \item \textbf{Torrefacción húmeda:} usa agua caliente a presión (hidrotermal).
+  \end{itemize}
+  \begin{block}{Ejemplo experimental con una rama de arce (maple)}
+    \begin{itemize}
+      \item \SI{70}{\celsius} – evaporación superficial (pérdida del \SI{20}{\percent} de masa).
+      \item \SIrange{100}{140}{\celsius} – secado total (pérdida acumulada del \SI{40}{\percent} de masa).
+      \item \SI{200}{\celsius} – inicio de la descomposición química (pérdida adicional del \SI{4}{\percent} de masa).
+      \item \SI{250}{\celsius} – color marrón oscuro, pérdida del \SI{11}{\percent} adicional de masa, pero solo \SI{13}{\percent} de energía.
+      \item \SI{310}{\celsius} – torrefacción severa: pérdida total del \SI{57}{\percent} de la masa, incremento de densidad energética, pero menor rendimiento energético.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Proceso de torrefacción en rama de arce}
+    \begin{figure}
+        \centering
+        % Reemplaza con la ruta a tu imagen
+        \includegraphics[width=0.7\linewidth]{Energias Alternativas/3-Biomass/img/Ej_Proceso_torrefaccion.png}
+        \caption{Proceso de Torrefacción en una rama de arce (maple).}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Etapas térmicas en la torrefacción}
+  \textbf{1. Presecado (Predrying)}
+  \begin{itemize}
+      \item Calentamiento inicial hasta los $\approx \SI{100}{\celsius}$.
+      \item Incremento gradual de temperatura por calor sensible.
+      \item Requiere energía baja comparado al total:
+      \[Q_{pd} = \frac{M_f C_{pw}(100 - T_0)}{\eta_{upd}}\]
+      \item Donde: $M_f$ es masa de biomasa, $C_{pw}$ calor específico, $T_0$ temperatura inicial y $\eta_{upd}$ es la eficiencia de utilización del calor.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Etapas térmicas (Continuación)}
+ \footnotesize
+  \textbf{2. Secado (Drying)}
+  \begin{itemize}
+      \item Etapa más intensiva en consumo energético.
+      \item El agua libre se evapora a temperatura constante.
+      \item La biomasa queda "bone dry" (completamente seca).
+  \end{itemize}
+  La carga térmica o energía requerida para esta etapa ($Q_d$) se calcula como:
+  \[
+  Q_d = \frac{L \cdot M_f \cdot M}{h_{ud}}
+  \]
+  
+  \textbf{Donde:}
+  \begin{itemize}
+    \item $L$: Calor latente de vaporización del agua ($\approx \SI{2260}{\kilo\joule\per\kilogram}$ a \SI{100}{\celsius}).
+    \item $M$: Fracción de humedad de la biomasa.
+    \item $M_f$: Masa de la biomasa en bruto.
+    \item $h_{ud}$: Eficiencia de utilización del calor en la etapa de secado.
+  \end{itemize}
+\end{frame}
+ 
+\begin{frame}{Etapas térmicas (Continuación)}
+ \footnotesize
+  \textbf {3. Calentamiento Posterior al Secado}
+  \begin{itemize}
+      \item Después del secado, la biomasa debe calentarse hasta la temperatura de torrefacción ($T_t$).
+      \item Se libera humedad ligada y volátiles ligeros.
+  \end{itemize}
+  \textbf{Energía requerida:}
+  \[
+  Q_{pdh} = \frac{M_f (1 - M) C_{pd} (T_t - 100)}{h_{u,pdh}}
+  \]
+
+  \textbf{Donde:}
+  \begin{itemize}
+    \item $M_f$: Masa de la biomasa en bruto.
+    \item $M$: Fracción de humedad (base húmeda).
+    \item $C_{pd}$: Calor específico de la biomasa seca.
+    \item $T_t$: Temperatura de torrefacción [\si{\celsius}].
+    \item $h_{u,pdh}$: Eficiencia de utilización del calor.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Etapas térmicas (Continuación)}
+\footnotesize
+  \textbf{4. Torrefacción}
+  \begin{itemize}
+    \item Etapa clave donde ocurre la despolimerización de la biomasa.
+    \item Depende de la temperatura y del \textit{tiempo de residencia}.
+    \item La degradación significativa inicia a partir de los \SI{200}{\celsius}.
+    \item La torrefacción es ligeramente exotérmica entre \SI{250} y \SI{300}{\celsius}.
+  \end{itemize}
+  \textbf{Energía requerida:}
+  \[
+  Q_{\text{tor}} = H_{\text{loss}} + M_f (1 - M) X_t
+  \]
+
+  \textbf{Donde:}
+  \begin{itemize}
+    \item $Q_{\text{tor}}$: Energía en Torrefacción requerida.
+    \item $H_{\text{loss}}$: Pérdida de calor al ambiente.
+    \item $X_t$: Calor de reacción por unidad de masa.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Etapas térmicas (Continuación)}
+\footnotesize
+  \textbf{5. Enfriamiento}
+  \begin{itemize}
+    \item La biomasa sale a alta temperatura ($T_t$) y debe enfriarse a una temperatura segura ($T_p$).
+    \item El proceso de enfriamiento extrae energía del producto.
+  \end{itemize}
+  \textbf{Energía extraída durante el enfriamiento:}
+  \[
+  Q_{\text{cool}} = M_f (1 - M) \cdot MY_{\text{db}} \cdot C_{pt} (T_t - T_p)
+  \]
+  \textbf{Donde:}
+  \begin{itemize}
+    \item $MY_{\text{db}}$: Rendimiento másico en base seca.
+    \item $C_{pt}$: Calor específico de la biomasa torrefactada.
+  \end{itemize}
+  \begin{alertblock}{Nota}
+  Parte del calor extraído ($Q_{\text{cool}}$) puede recuperarse para ser reutilizado en el proceso.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Ciclo térmico de la torrefacción}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{Energias Alternativas/3-Biomass/img/Temp_vs_Pros_torrefaccion.png}
+        \caption{Relación entre temperatura y etapas del proceso.}
+        \label{fig:temp_vs_torrefaccion}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{Energias Alternativas/3-Biomass/img/Carga_termica_vs_Pros_torrefaccion.png}
+        \caption{Carga térmica asociada a cada etapa del proceso.}
+        \label{fig:carga_termica_vs_torrefaccion}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Mecanismo de la Torrefacción}
+\textbf{Resumen:} Durante la torrefacción, la biomasa sufre transformaciones termoquímicas que se dividen en cinco regímenes de temperatura (Bergman et al., 2005a):
+\begin{itemize}
+  \item Se alteran los componentes principales: hemicelulosa, celulosa y lignina.
+  \item La descomposición inicia a partir de \SI{150}{\celsius}.
+  \item Las reacciones clave incluyen: \textbf{deshidratación} y \textbf{descarboxilación}.
+\end{itemize}
+\vspace{0.5em}
+\textbf{Principales productos:} sólidos (char), líquidos (agua, alcoholes, furanos), y gases (\ce{CO2}, \ce{CO}, \ce{CH4}).
+\end{frame}
+
+\begin{frame}{Regímenes térmicos del proceso de torrefacción}
+\begin{enumerate}
+  \item \textbf{Régimen A (\SIrange{50}{120}{\celsius}):} Secado no reactivo. Pérdida de humedad física.
+  \item \textbf{Régimen B (\SIrange{120}{150}{\celsius}):} Ablandamiento de la lignina.
+  \item \textbf{Régimen C (\SIrange{150}{200}{\celsius}):} Secado reactivo. Inicia despolimerización de hemicelulosa.
+  \item \textbf{Régimen D (\SIrange{200}{250}{\celsius}):} Zona activa de torrefacción. Desvolatilización y carbonización limitadas.
+  \item \textbf{Régimen E (\SIrange{250}{300}{\celsius}):} Descomposición avanzada. Estructura quebradiza.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Degradación térmica de los polímeros principales}
+\textbf{Rangos de degradación (Prins, 2005):}
+\begin{itemize}
+  \item Hemicelulosa: \textbf{\SIrange{225}{300}{\celsius}}
+  \item Celulosa: \textbf{\SIrange{305}{375}{\celsius}}
+  \item Lignina: \textbf{\SIrange{250}{500}{\celsius}}
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Observaciones:}
+\begin{itemize}
+  \item Los tres polímeros reaccionan de manera independiente.
+  \item La pérdida total de masa puede aproximarse sumando sus degradaciones individuales.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Productos de la torrefacción}
+\begin{block}{Sólidos}
+  Carbón (char), azúcares modificados, nuevas estructuras poliméricas, ceniza.
+\end{block}
+
+\begin{block}{Líquidos condensados}
+  Agua de descomposición, terpenos, ceras, alcoholes, furanos.
+\end{block}
+
+\begin{block}{Gases no condensables}
+  \ce{CO}, \ce{CO2}, \ce{CH4}, ácido acético, metanol, ácido fórmico.
+\end{block}
+
+\vspace{0.5em}
+\textbf{Reacciones clave:}
+\begin{itemize}
+  \item Descarboxilación $\rightarrow$ \ce{CO2}
+  \item Ruptura del grupo acetilo (celulosa) $\rightarrow$ ácido acético
+  \item El \ce{CO} se forma por reacción \ce{CO2} + vapor en el char.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Efecto de los Parámetros de Diseño en la Torrefacción}
+%\textbf{Resumen:}
+\begin{itemize}
+  \item La eficiencia del proceso de torrefacción depende de múltiples variables.
+  \item Parámetros clave: temperatura, tiempo de residencia, tipo de biomasa, tamaño de partícula.
+  \item Se analiza cómo influyen en el rendimiento en masa y energía del proceso.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Parámetro: Temperatura}
+\textbf{Influencia de la temperatura:}
+\begin{itemize}
+  \item Es el parámetro de mayor impacto en la degradación térmica.
+  \item A mayor temperatura, mayor descomposición de componentes orgánicos.
+  \item Disminuyen los rendimientos en masa y energía, pero aumenta la \textbf{densidad energética}.
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Efectos observados:}
+\begin{itemize}
+  \item Disminución de H y O en la biomasa.
+  \item Aumento en la fracción de carbono fijo.
+  \item Relación exponencial del rendimiento con $t/T_t$ (Cielkosz y Wallace, 2011).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Aumento de la temperatura del núcleo}
+\begin{itemize}
+  \item En partículas gruesas, la torrefacción ocurre principalmente en el interior.
+  \item La temperatura del núcleo es más relevante que la superficial.
+  \item Por debajo de \SI{270}{\celsius}: proceso ligeramente \textbf{endotérmico}.
+  \item Por encima de \SI{280}{\celsius}: comportamiento \textbf{ligeramente exotérmico} (Cielkosz y Wallace, 2011).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Transferencia de calor hacia el núcleo}
+\begin{itemize}
+  \item El calor se transfiere por:
+  \begin{enumerate}
+    \item \textbf{Convección} desde la fuente térmica hacia la superficie.
+    \item \textbf{Conducción y convección en los poros} hacia el núcleo.
+  \end{enumerate}
+  \item Esto genera un \textbf{gradiente negativo de temperatura} desde el reactor hacia el centro de la partícula.
+  \item El número de Biot ($Bi$) es clave para determinar la magnitud de ese gradiente:
+  \begin{itemize}
+    \item $Bi$ bajo (partículas finas): temperatura casi uniforme.
+    \item $Bi$ alto (partículas grandes): diferencias significativas entre núcleo y superficie.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Histórico de temperatura en cilindro de madera}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{Energias Alternativas/3-Biomass/img/Historico_tem__cilindor madera.png}
+        \caption{Cambios históricos de temperatura en el núcleo de un cilindro de madera de álamo de \SI{22}{\milli\metre} de diámetro.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Comportamiento térmico en el núcleo}
+\begin{itemize}
+  \item Al ingresar al reactor, la temperatura del núcleo está muy por debajo de la superficial.
+  \item Aumenta progresivamente al recibir calor del entorno.
+  \item El núcleo puede superar la temperatura del reactor: \textbf{indicio de exotermicidad}.
+  \item Tras un pico, la temperatura desciende lentamente y se estabiliza.
+\end{itemize}
+\vspace{0.5em}
+\textbf{Conclusión:} la temperatura del núcleo es crítica para el rendimiento térmico y de masa.
+\end{frame}
+
+\begin{frame}{Parámetro: Tiempo de Residencia}
+\begin{itemize}
+  \item La torrefacción se distingue por su \textbf{baja velocidad de calentamiento} ($< \SI{50}{\celsius\per\minute}$) en comparación con la pirólisis rápida.
+  \item Esto implica que el \textbf{tiempo de residencia} de la biomasa en el reactor es largo: \textbf{decenas de minutos}.
+  \item A mayor tiempo de residencia:
+  \begin{itemize}
+    \item \textbf{Disminuye el rendimiento en masa}.
+    \item \textbf{Aumenta la densidad energética}.
+  \end{itemize}
+  \item La influencia del tiempo de residencia es \textbf{menor que la de la temperatura}.
+  \item El efecto sobre la pérdida de masa se estabiliza tras \textbf{aproximadamente 1 hora} (Stelt et al., 2011).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Parámetro: Tipo de Biomasa}
+\textbf{Resumen:}
+\begin{itemize}
+  \item El tipo de biomasa afecta directamente el rendimiento en masa y la composición del producto.
+  \item La \textbf{hemicelulosa} es el componente más sensible a la torrefacción.
+  \item A mayor contenido de hemicelulosa, mayor pérdida de masa se espera.
+\end{itemize}
+\vspace{0.5em}
+\textbf{Observación clave:}
+Biomasas con contenido similar de hemicelulosa pueden comportarse de forma muy distinta.
+\end{frame}
+
+\begin{frame}{Hardwood vs Softwood}
+\begin{itemize}
+  \item \textbf{Hardwood (latifoliadas):}
+  Contienen \textbf{\SIrange{80}{90}{\percent} de xilano} en su hemicelulosa.
+  \item \textbf{Softwood (coníferas):}
+  Contienen solo \textbf{\SIrange{15}{30}{\percent} de xilano}.
+  \item El \textbf{xilano} es el componente más reactivo y el que se descompone más rápidamente.
+\end{itemize}
+\vspace{0.5em}
+\textbf{Resultado:}
+Mayor pérdida de masa en hardwood, pero también mayor incremento en la \textbf{densidad energética}.
+\end{frame}
+
+\begin{frame}{Productos según el tipo de biomasa}
+\textbf{Maderas duras (Hardwood):}
+\begin{itemize}
+  \item Liberan principalmente \textbf{ácido acético} y \textbf{agua}.
+  \item Mayor pérdida de masa, pero baja pérdida energética.
+\end{itemize}
+\textbf{Maderas blandas (Softwood):}
+\begin{itemize}
+  \item Liberan mayoritariamente \textbf{ácido fórmico}.
+  \item Menor pérdida de masa, pero menor ganancia en densidad energética.
+\end{itemize}
+\vspace{0.5em}
+\textbf{Conclusión:}
+El tipo de biomasa impacta la eficiencia y el perfil de productos.
+\end{frame}
+
+\begin{frame}{Contenido de xilano en diferentes biomasas}
+\centering
+\begin{table}
+\caption{Variabilidad en el contenido de xilano.}
+\begin{tabular}{lc}
+  \toprule
+  \textbf{Tipo de biomasa} & \textbf{Contenido de xilano (\%)} \\
+  \midrule
+  Roble (Hardwood) & 88 \\
+  Arce (Hardwood) & 85 \\
+  Pino (Softwood) & 25 \\
+  Abeto (Softwood) & 20 \\
+  \bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Parámetro: Tamaño del Material}
+\begin{itemize}
+  \item El tamaño de las partículas de biomasa influye en el rendimiento del proceso.
+  \item Para partículas finas, el efecto puede ser despreciable.
+  \item Para partículas grandes, el efecto es medible y relevante.
+  \item Relacionado directamente con la transferencia de calor y la distribución de temperatura.
+\end{itemize}
+\vspace{0.5em}
+\textbf{Observación experimental:}
+\begin{itemize}
+  \item Mayor \textbf{diámetro medio volumétrico} $\rightarrow$ ligero aumento del rendimiento.
+  \item Mayor \textbf{diámetro con longitud constante} $\rightarrow$ disminución del rendimiento.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Número de Biot – Transferencia térmica interna}
+\[
+Bi = \frac{hV}{\lambda S} \approx \frac{h r_p}{\lambda}
+\]
+\vspace{0.5em}
+\textbf{Donde:}
+\begin{itemize}
+  \item $h$: coef. de transferencia de calor por convección.
+  \item $V$: volumen de la partícula.
+  \item $S$: área superficial externa.
+  \item $r_p$: radio característico de la partícula.
+  \item $\lambda$: conductividad térmica de la biomasa.
+\end{itemize}
+\vspace{0.5em}
+\textbf{Interpretación:}
+\begin{itemize}
+  \item $Bi$ pequeño $\rightarrow$ partículas finas $\rightarrow$ temperatura uniforme.
+  \item $Bi$ grande $\rightarrow$ partículas grandes $\rightarrow$ núcleo más frío.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Número de Pirólisis – Comparación entre transferencia y reacción}
+\[
+Py = \frac{h}{K \rho C_p r_p} 
+\]
+\vspace{0.5em}
+\textbf{Donde:}
+\begin{itemize}
+  \item $h$: coeficiente de transferencia de calor.
+  \item $K$: velocidad de reacción de torrefacción (\si{\per\second}).
+  \item $\rho$: densidad de la partícula.
+  \item $C_p$: calor específico de la partícula.
+  \item $r_p$: radio característico.
+\end{itemize}
+\vspace{0.5em}
+\textbf{Conclusión:}
+\begin{itemize}
+  \item $Py$ alto $\rightarrow$ reacción controlada cinéticamente.
+  \item $Py$ bajo $\rightarrow$ controlado por transferencia de calor.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Composición de Extractivos en Maderas Duras}
+\tiny
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\hline
+\textbf{Madera} & \textbf{Celulosa} & \textbf{Lignina} & \textbf{Hemicelulosa} & \textbf{Glucano} & \textbf{Glucomanano} & \textbf{Arabinogalactano} & \textbf{Xilano} \\
+ & (\%) & (\%) & (\%) & (\%) & (\%) & (\%) & (\%) \\
+\hline
+Haya & 42 & 22 & 36 & 11 & 11 & 6 & 69 \\
+Abedul blanco & 41 & 19 & 40 & 5 & 8 & 3 & 85 \\
+Olmo blanco & 49 & 24 & 27 & 7 & 15 & 7 & 70 \\
+Álamo temblón & 53 & 16 & 31 & 10 & 13 & 3 & 74 \\
+\textbf{Promedio} & 45 & 21 & 34 & 9 & 15 & 3 & 74 \\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Composición de Extractivos en Maderas Blandas}
+\tiny
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\hline
+\textbf{Madera} & \textbf{Celulosa} & \textbf{Lignina} & \textbf{Hemicelulosa} & \textbf{Glucano} & \textbf{Glucomanano} & \textbf{Arabinogalactano} & \textbf{Xilano} \\
+ & (\%) & (\%) & (\%) & (\%) & (\%) & (\%) & (\%) \\
+\hline
+Abeto balsámico & 44 & 29 & 27 & 0 & 67 & 4 & 30 \\
+Pícea blanca & 44 & 27 & 29 & 0 & 59 & 7 & 34 \\
+Cedro blanco oriental & 44 & 31 & 25 & 0 & 44 & 8 & 48 \\
+Pino de Canadá (Jack Pine) & 41 & 29 & 30 & 0 & 53 & 7 & 40 \\
+\textbf{Promedio} & 43 & 29 & 28 & 0 & 57 & 7 & 32 \\
+\hline
+\end{tabular}
+\end{frame}
+
+
+
+\begin{frame}{Grado de Torrefacción}
+\begin{itemize}
+  \item La torrefacción es comparable al proceso de \textbf{tostado de café}.
+  \item A mayor temperatura $\rightarrow$ mayor degradación $\rightarrow$ color más oscuro.
+  \item El grado de torrefacción ayuda a \textbf{cuantificar la intensidad del proceso}.
+\end{itemize}
+\vspace{0.5em}
+\textbf{Importancia:}
+\begin{itemize}
+  \item Permite ajustar la torrefacción según fines técnicos o comerciales.
+  \item Influye directamente en el rendimiento y propiedades del producto.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Clasificación de la Torrefacción (Chen y Kuo, 2011)}
+\begin{enumerate}
+  \item \textbf{Torrefacción ligera} (\SIrange{200}{240}{\celsius}):
+  \begin{itemize}
+    \item Solo se degrada la hemicelulosa.
+    \item Lignina y celulosa permanecen intactas.
+  \end{itemize}
+  \item \textbf{Torrefacción media} (\SIrange{240}{260}{\celsius}):
+  \begin{itemize}
+    \item La celulosa empieza a verse levemente afectada.
+  \end{itemize}
+  \item \textbf{Torrefacción severa} (\SIrange{260}{300}{\celsius}):
+  \begin{itemize}
+    \item Despolimerización de hemicelulosa, celulosa y lignina.
+  \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Atributos clave del producto torrefactado}
+\textbf{Selección del régimen:} Dependerá del uso final de la biomasa y criterios de eficiencia y transporte.
+\begin{alertblock}{Atributos clave}
+\begin{enumerate}
+  \item Rendimiento en masa
+  \item Densidad energética
+  \item Rendimiento energético
+\end{enumerate}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Rendimiento en Masa}
+\begin{itemize}
+  \item Mide la fracción de masa de la biomasa original que permanece en el producto.
+  \item La torrefacción implica cambios químicos, más allá del secado físico.
+  \item Agua y ceniza no aportan energía química.
+\end{itemize}
+\vspace{0.5em}
+\textbf{Importancia:} Una definición adecuada permite distinguir la torrefacción de procesos como el secado.
+\end{frame}
+
+\begin{frame}{Rendimiento en Masa en base seca libre de cenizas (daf)}
+\textbf{Definición más precisa:}
+\[
+MY_{\text{daf}} = \frac{\text{masa de biomasa torrefactada (daf)}}{\text{masa de biomasa original (daf)}}
+\]
+\textbf{Ventajas:}
+\begin{itemize}
+  \item Representa la conversión del contenido orgánico.
+  \item Permite análisis energético más realistas.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Otras definiciones de rendimiento en masa}
+\textbf{Base seca (db):}
+\[
+MY_{\text{db}} = \frac{\text{masa torrefactada (base seca)}}{\text{masa original (base seca)}} 
+\]
+\textbf{Base húmeda o “as-received” (ar):}
+\[
+MY_{\text{ar}} = \frac{\text{masa total torrefactada}}{\text{masa de biomasa húmeda}}
+\]
+\end{frame}
+
+\begin{frame}{Relación entre las definiciones de rendimiento}
+\textbf{Relación entre $MY_{ar}$ y $MY_{db}$:}
+\[
+MY_{\text{ar}} = (1 - M) \cdot MY_{\text{db}} 
+\]
+\vspace{1em}
+\textbf{Relación entre $MY_{db}$ y $MY_{daf}$:}
+\[MY_{daf}=\frac{MY_{db}-ASH_{db}}{1-ASH_{db}}\]
+\[
+MY_{\text{db}} = MY_{\text{daf}} \cdot (1 - ASH_{\text{db}}) + ASH_{\text{db}} 
+\]
+La fracción de cenizas en base seca puede relacionarse con la fracción en base tal como se recibe de la siguiente manera:
+\[ASH_{db}=\frac{ASH}{1-M}\]
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Ejemplo: Planta de torrefacción}
+\footnotesize
+Una empresa planea construir una planta de torrefacción para utilizar un bosque de pinos.
+\begin{block}{Datos de la Biomasa Cruda}
+\begin{itemize}
+    \item Humedad (M): \SI{35}{\percent} (base húmeda).
+    \item Análisis próximo (base seca): Volátiles \SI{80.71}{\percent}, C-fijo \SI{16.16}{\percent}, Cenizas \SI{3.13}{\percent}.
+    \item Análisis último (base seca): C \SI{47.99}{\percent}, H \SI{6.25}{\percent}, O \SI{40.73}{\percent}, N \SI{1.31}{\percent}, S \SI{0.58}{\percent}, Cenizas \SI{3.13}{\percent}.
+\end{itemize}
+\end{block}
+\begin{block}{Condiciones del Proceso}
+\begin{itemize}
+    \item Temperatura: \SI{280}{\celsius}, Tiempo: \SI{20}{\minute}.
+    \item El \SI{20}{\percent} de la biomasa seca se convierte en volátiles.
+    \item Los volátiles transportan el \SI{5}{\percent} de la energía térmica total.
+\end{itemize}
+\end{block}
+\begin{alertblock}{Calcular}
+\begin{enumerate}
+  \item El poder calorífico (HHV y LHV) de la biomasa en base húmeda, seca, y seca libre de cenizas.
+  \item Rendimiento en masa en base seca y en base seca libre de cenizas.
+\end{enumerate}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Ejemplo: HHV y LHV en base seca (db)}
+\small
+\textbf{Ecuación de Channiwala y Parikh (2002):}
+{ \[
+\text{HHV}_{\text{f,db}} = 349.1 C + 1178.3 H + 100.5 S - 103.4 O - 15.1 N - 21.1 ASH
+\]}
+\textbf{Sustitución:}
+{
+\begin{align*}
+\text{HHV}_{\text{db}} &= 349.1(47.99) + 1178.3(6.25) + 100.5(0.58) - 103.4(40.73) - 15.1(1.31) - 21.1(3.13) \\
+&= \num{16752.0} + \num{7364.4} + \num{58.3} - \num{4211.5} - \num{19.8} - \num{66.0} \\
+&= \num{19788.4} \; \si{\kilo\joule\per\kilogram} \approx \SI{19.88}{\mega\joule\per\kilogram}
+\end{align*}}
+\textbf{LHV (base seca):}
+{
+\begin{align*}
+\text{LHV}_{\text{db}} &= \text{HHV}_{\text{db}} - 2241.7 \left(\frac{9H}{100} -\frac{M}{100}\right) \si{\kilo\joule\per\kilogram} \\
+&= \num{19877.4} - 2441.7 \left(\frac{9 \times 6.25}{100}\right) = \num{19788.4} - 1373.6 = \num{18503.8} \; \si{\kilo\joule\per\kilogram} \approx \SI{18.50}{\mega\joule\per\kilogram}
+\end{align*}}
+\end{frame}
+
+\begin{frame}{Ejemplo: HHV y LHV en otras bases}
+\textbf{Base húmeda (ar):}
+\begin{align*}
+\text{HHV}_{\text{ar}} &= \text{HHV}_{\text{f,db}} \times (1 - M) = \num{19.88} \times (1 - 0.35) = \SI{12.92}{\mega\joule\per\kilogram} \\
+H_{\text{ar}} &= H_{\text{db}} \times (1-M) = 6.25 \times 0.65 = 4.0625 \\
+\text{LHV}_{\text{ar}} &= \text{HHV}_{\text{ar}} - 2441.7 \left(\frac{9H_{\text{ar}}}{100} + \frac{M}{100}\right) \\
+&= \num{12920} - 2441.7 \left(\frac{9\times 4.0625}{100} -\frac{35}{100}\right) = \num{11317} \; \si{\kilo\joule\per\kilogram} \approx \SI{11.31}{\mega\joule\per\kilogram}
+\end{align*}
+\textbf{Base seca libre de cenizas (daf):}
+\begin{align*}
+\text{HHV}_{\text{daf}} &= \frac{\text{HHV}_{\text{db}}}{1 - \text{ASH}_{\text{db}}} = \frac{\num{19.88}}{1 - 0.0313} = \SI{20.52}{\mega\joule\per\kilogram} \\
+\text{LHV}_{\text{daf}} &= \frac{\text{LHV}_{\text{db}}}{1 - \text{ASH}_{\text{db}}} = \frac{\num{18.50}}{1 - 0.0313} = \SI{19.10}{\mega\joule\per\kilogram}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Ejemplo: Rendimiento Másico}
+\textbf{En base seca (db):}
+\[ASH_{ar}=ASH_{db}(1-M) =3.13(1-0.35)=2.03\%\]
+\[ASH_{daf}=\frac{ASH_{ar}}{1-M-ASH}=\frac{3.13}{1-0.35-0.002023}=4.53\%\]
+\[
+MY_{db}=1-\text{perdidas de masa} =MY_{db} = 100\% - 20\% = \boxed{80\%}
+\]
+\textbf{En base húmeda (ar):}
+\[
+MY_{ar} = MY_{db} \times (1 - M) = 0.80 \times (1 - 0.35) = \boxed{52\%}
+\]
+\textbf{En base seca y libre de cenizas (daf):}
+\[
+MY_{daf} = \frac{MY_{db} - ASH_{db}}{1 - ASH_{db}} = \frac{0.80 - 0.0313}{1 - 0.0313} = \frac{0.7687}{0.9687} = \boxed{79.35\%}
+\]
+\end{frame}
+
+\begin{frame}{Densidad Energética}
+\begin{itemize}
+  \item \textbf{Definición masiva:} \\
+        Cantidad de energía térmica liberada al quemar \underline{una unidad de masa} de biomasa. \\
+        \[\text{Densidad energética} \equiv \text{HHV} \quad [\si{\kilo\joule\per\kilogram}]\]
+        
+  \item \textbf{Definición volumétrica:} \\
+        Energía útil almacenada en \underline{una unidad de volumen}, expresada en: \\
+        \[\si{\kilo\joule\per\cubic\metre}, \quad \si{\kilo\calorie\per\cubic\metre}, \quad \si{\btu\per\cubic\foot}\]
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Incremento de Densidad Energética}
+\begin{columns}[T]
+\begin{column}{0.6\textwidth}
+\begin{itemize}
+  \item La torrefacción elimina agua y compuestos volátiles pobres en energía.
+  \item Ejemplo:
+        \begin{itemize}
+            \item Masa inicial: 100 u, Energía: 100 u
+            \item Pérdida de masa: 30 u (\ce{H2O}, \ce{CO2}, etc.)
+            \item Energía retenida: 90 u
+        \end{itemize}
+  \item $\displaystyle \text{Densidad energética}_{\text{antes}} = \frac{100}{100}=1.0$
+  \item $\displaystyle \text{Densidad energética}_{\text{torref}} = \frac{90}{70}=1.28$
+\end{itemize}
+\end{column}
+\begin{column}{0.4\textwidth}
+\centering
+\includegraphics[width=\linewidth]{Energias Alternativas/3-Biomass/img/torrefier.png}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Definición de Rendimiento Energético (EY)}
+\[
+EY=\frac{\text{Energía en el producto torrefactado}}{\text{Energía en la biomasa cruda}}
+     =\frac{m_p \times HHV_p}{m_f \times HHV_f}
+\]
+Donde:
+\begin{itemize}
+  \item $m_p$: masa de producto
+  \item $m_f$: masa de alimentación
+  \item $HHV_p, HHV_f$: poderes caloríficos (misma base)
+\end{itemize}
+\begin{block}{Relación con el rendimiento másico (base daf)}
+\[
+EY_{daf}= MY_{daf} \times \frac{HHV_{p,daf}}{HHV_{f,daf}}
+\]
+\end{block}
+A diferencia del rendimiento másico, el $EY$ es independiente de la base elegida.
+\end{frame}
+
+\begin{frame}{Paso 1: Rendimiento energético (\textit{Energy Yield})}
+\small
+\textbf{Datos:}
+\begin{itemize}
+  \item Pérdida de energía en volátiles: \SI{5}{\percent}
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Cálculo del rendimiento energético:}
+\[
+EY = 1 - \text{Pérdida de energía} = 1 - 0.05 = 0.95 = \SI{95}{\percent}
+\]
+
+\vspace{0.3cm}
+\textbf{Importante:} El rendimiento energético es independiente de la base (seca, libre de cenizas o húmeda), por tanto:
+\[
+EY_{ar} = EY_{db} = EY_{daf} = \SI{95}{\percent}
+\]
+\end{frame}
+
+
+\begin{frame}{Paso 2: Cálculo del HHV en base \textit{daf} y \textit{db}}
+\small
+\textbf{Datos del Ejemplo:}
+\begin{itemize}
+  \item $HHV_{f,daf} = \SI{20.52}{MJ/kg}$
+  \item $MY_{daf} = 79.35\% = 0.7935$
+  \item $EY_{daf} = 0.95$
+\end{itemize}
+
+\textbf{Cálculo del HHV en base \textit{daf} del producto torrefactado:}
+\[
+HHV_{t,daf} = HHV_{f,daf} \times \frac{EY_{daf}}{MY_{daf}} = \SI{20.52}{} \times \frac{0.95}{0.7935} = \SI{25.36}{MJ/kg}
+\]
+
+\textbf{Cálculo del HHV en base seca (\textit{db}):}
+
+\textbf{Datos adicionales:}
+\begin{itemize}
+  \item Ceniza antes de torrefacción: 2.03\% en base ar
+  \item Rendimiento másico en base ar: 52\% = 0.52
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Paso 3: Cálculo del HHV en base \textit{as-received (ar)}}
+\[
+ASH_{t} = \frac{2.03}{0.52} = 3.91\% = 0.0391
+\]
+\[
+HHV_{t,db} = HHV_{t,daf} \times \frac{1 - ASH_t}{1} = \SI{24.57}{} \times (1 - 0.0391) = \SI{23.62}{MJ/kg}
+\]
+
+\textbf{Fórmula para conversión de base seca a base ar:}
+\[
+HHV_{t,ar} = HHV_{t,db} \times \frac{1 - M - ASH_t}{1 - M}
+\]
+
+\textbf{Aplicando:}
+\[
+HHV_{t,ar} = \SI{23.62}{} \times \frac{1 - 0.20 - 0.0391}{1 - 0.20} = \SI{23.62}{} \times \frac{0.7609}{0.80} = \SI{22.45}{MJ/kg}
+\]
+\end{frame}
+
+\begin{frame}{Paso 4: Comparación del HHV en diferentes bases}
+\small
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Base} & \textbf{Descripción} & \textbf{HHV (MJ/kg)} \\
+\hline
+\textbf{daf} & Libre de humedad y cenizas & \SI{24.57}{} \\
+\textbf{db} & Base seca (sin humedad) & \SI{23.62}{} \\
+\textbf{ar} & Tal como se recibe (con 20 \% humedad) & \SI{22.45}{} \\
+\hline
+\end{tabular}
+\caption*{\footnotesize Comparación del poder calorífico superior (HHV) del producto torrefactado en distintas bases.}
+\end{table}
+\end{frame}
+
+
+\begin{frame}{Conclusiones Parciales}
+\begin{itemize}
+  \item La densidad energética (HHV) aumenta tras la torrefacción debido a la eliminación de agua y gases pobres en energía.
+  \item El rendimiento energético (EY) cuantifica la fracción de energía retenida y suele ser $> \SI{90}{\percent}$ en torrefacción suave.
+  \item Un balance óptimo entre $MY$, $EY$ y HHV permite diseñar procesos eficientes.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Propiedades Físicas de la Biomasa Torrefactada}
+\small
+\begin{itemize}
+  \item La torrefacción modifica varias propiedades físicas importantes de la biomasa.
+  \item Estas propiedades son especialmente relevantes para la co-combustión con carbón.
+  \item La masa y el volumen de la biomasa disminuyen durante la torrefacción.
+  \item Como consecuencia, la \textbf{densidad} se ve afectada y no puede estimarse solo a partir del rendimiento másico.
+  \item La densidad disminuye con la temperatura y severidad del tratamiento térmico.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Tipos de Densidad en Biomasa Torrefactada}
+\small
+\begin{enumerate}
+  \item \textbf{Densidad real (o verdadera)}:
+  \begin{itemize}
+    \item Se basa solo en el volumen sólido de la pared celular.
+    \item Valor típico para biomasa lignocelulósica: \textbf{1400 kg/m\textsuperscript{3}}.
+    \item Cambia marginalmente (<5\%) tras la torrefacción.
+  \end{itemize}
+
+  \item \textbf{Densidad aparente}:
+  \begin{itemize}
+    \item Considera el volumen del sólido y de los poros internos.
+    \item Disminuye notablemente con la torrefacción.
+  \end{itemize}
+
+  \item \textbf{Densidad a granel}:
+  \begin{itemize}
+    \item Se calcula incluyendo el volumen del sólido, poros internos y vacíos entre partículas.
+    \item También disminuye con la temperatura de torrefacción.
+  \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Molienda de la Biomasa Cruda}
+\small
+\begin{itemize}
+    \item La biomasa sin tratar es altamente \textbf{fibrosa} y sus fibras superficiales se entrelazan como \textit{Velcro}.
+    \item Esto genera una \textbf{alta fricción interparticular}, dificultando su manejo y transporte neumático.
+    \item Su \textbf{naturaleza suave y no frágil} complica la pulverización a tamaños finos ($<$ 75 $\mu$m).
+    \item Requiere considerablemente \textbf{más energía} que el carbón para ser molida:
+    \begin{itemize}
+        \item Carbón: 7–36 kWh/ton para $d_{50} \sim$ 500 μm.
+        \item Madera de álamo crudo: 130–170 kWh/ton (Esteban y Carrasco, 2006).
+    \end{itemize}
+    \item Esta diferencia representa \textbf{un orden de magnitud mayor} en consumo energético.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Efecto de la Torrefacción en la Molienda}
+\small
+\begin{itemize}
+    \item La torrefacción descompone completamente la estructura celular de la biomasa.
+    \item Esto la hace más \textbf{frágil, suave y menos fibrosa}, lo que facilita:
+    \begin{itemize}
+        \item La molienda a tamaños finos.
+        \item El transporte neumático.
+        \item El almacenamiento y manejo mecánico.
+    \end{itemize}
+    \item Las partículas torrefactadas presentan:
+    \begin{itemize}
+        \item \textbf{Ausencia de exterior fibroso}
+        \item \textbf{Extremos agudos y superficie lisa}, lo cual reduce fricción e interbloqueo.
+    \end{itemize}
+    \item Esto resuelve muchos de los problemas típicos de la biomasa cruda en \textbf{co-combustión con carbón}.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Efecto de la Torrefacción sobre la Molienda}
+\small
+\begin{itemize}
+    \item La torrefacción mejora significativamente la molibilidad de la biomasa.
+    \item Los principales parámetros que influyen en la reducción de energía para molienda son:
+    \begin{enumerate}
+        \item \textbf{Temperatura de torrefacción}
+        \item \textbf{Tiempo de residencia}
+        \item \textbf{Tamaño original de partícula}
+    \end{enumerate}
+    \item Orden de influencia: \textbf{Temperatura > Tiempo > Tamaño de partícula} (Joshi, 1979).
+    \item A mayor temperatura de torrefacción:
+    \begin{itemize}
+        \item Menor energía específica de molienda.
+        \item Mayor cantidad de partículas finas producidas.
+        \item Distribución de tamaño de partícula más uniforme.
+    \end{itemize}
+    \item \textbf{Ejemplo:} Reducción de consumo energético de 237 kWh/t (biomasa cruda) a 24 kWh/t (torrefacción a 280 °C) (Phanphanich et al., 2011).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hidrofobicidad de la Biomasa Torrefactada}
+\begin{itemize}
+    \item La biomasa es \textbf{higroscópica}, absorbe humedad incluso después del secado.
+    \item El almacenamiento prolongado genera costos energéticos elevados por la evaporación de humedad durante combustión o gasificación.
+    \item El \textbf{carbón es hidrofóbico} y no presenta este problema.
+\end{itemize}
+
+\textbf{Efectos negativos de la humedad en la biomasa:}
+\begin{enumerate}
+    \item Disminuye el poder calorífico y aumenta las pérdidas por chimenea.
+    \item Favorece el crecimiento de hongos durante el almacenamiento.
+    \item Incrementa los costos de transporte, manejo y preparación.
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+    \textbf{Beneficios de la torrefacción:}
+\begin{itemize}
+    \item Reduce la humedad inicial (10–50\%) a \textbf{1–5\%} mediante secado y tratamiento térmico.
+    \item La biomasa se vuelve \textbf{hidrofóbica} y resistente a la reabsorción de agua.
+    \item Permite \textbf{almacenamiento prolongado sin degradación biológica} (Tumuluru et al., 2011).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{¿Por qué la Biomasa se Vuelve Hidrofóbica?}
+\small
+\begin{itemize}
+    \item La \textbf{hemicelulosa} es la más higroscópica de las fracciones de la biomasa.
+    \item La torrefacción degrada casi totalmente la hemicelulosa $\Rightarrow$ \textbf{reduce la absorción de agua}.
+    \item Se eliminan grupos hidroxilo (–OH), que son responsables de los enlaces de hidrógeno con el agua.
+    \item Se forman estructuras \textbf{no polares e insaturadas} (alquitrán condensado) que impiden la condensación de agua en los poros.
+    \item La absorción de humedad disminuye \textbf{100 veces} tras torrefacción a 280 °C (Li et al., 2012; Pastorova et al., 1993).
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Explosividad del Polvo de Biomasa Torrefactada}
+\small
+\begin{itemize}
+    \item La biomasa torrefactada se vuelve más frágil $\Rightarrow$ genera más \textbf{polvo fino}.
+    \item Su \textbf{baja humedad y alta reactividad} aumentan el riesgo de ignición en molinos y ductos.
+    \item También presenta \textbf{mayor riesgo de incendio} por su baja temperatura de ignición.
+    \item Se recomienda considerar medidas ATEX y sistemas de mitigación al manipular biomasa torrefactada.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Densificación y Pelletización de Biomasa}
+\small
+\begin{itemize}
+    \item La biomasa torrefactada puede ser pelletizada para:
+    \begin{itemize}
+        \item Mejorar su \textbf{densidad energética}
+        \item Facilitar transporte y almacenamiento
+    \end{itemize}
+    \item Energía volumétrica:
+    \begin{itemize}
+        \item Madera sin tratar: 5.8 GJ/m$^3$
+        \item Pellet torrefactado: 16.6 GJ/m$^3$
+    \end{itemize}
+    \item La torrefacción mejora la hidrofobicidad de los pellets y reduce su degradación en almacenamiento.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Calidad del Pellet y Rol de la Lignina}
+\small
+\begin{itemize}
+    \item La lignina actúa como aglutinante natural al calentarse (50–150 °C).
+    \item La torrefacción:
+    \begin{itemize}
+        \item Aumenta el porcentaje relativo de lignina (por pérdida de hemicelulosa).
+        \item Abre sitios activos de lignina, mejorando el enlace entre partículas.
+    \end{itemize}
+    \item Beneficios:
+    \begin{itemize}
+        \item Menor presión y temperatura requeridas para pelletizar
+        \item Menor energía de pelletización respecto a biomasa cruda
+    \end{itemize}
+    \item Posible desventaja: \textbf{mayor fragilidad} del pellet torrefactado $\Rightarrow$ posible solución: \textbf{torrefacción simultánea con pelletización}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo: Densidad Energética de la Madera}
+%\small
+La madera presenta las siguientes características: \\
+\begin{itemize}
+    \item Contenido de humedad: 35\%
+    \item Poder calorífico superior en base tal como recibido (HHV$_{\text{ar}}$): 12.92 MJ/kg
+    \item Densidad aparente: 300 kg/m³
+\end{itemize}
+\begin{enumerate}
+    \item \textbf{Peletización directa:}
+    \begin{itemize}
+        \item Humedad reducida al 7\%
+        \item Densidad aparente: 650 kg/m³
+    \end{itemize}
+    \item \textbf{Torrefacción seguida de peletización:}
+    \begin{itemize}
+        \item Reducción del 39\% en densidad
+        \item Libre de humedad
+        \item HHV: 24.59 MJ/kg
+        \item Reducción del 20\% en volumen
+    \end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+
+Se desprecia cualquier cambio en el contenido energético por efecto de la peletización.
+
+\vspace{0.3cm}
+\textbf{Se solicita:}
+\begin{itemize}
+    \item[a)] Comparar la \textbf{densidad energética volumétrica} entre la madera cruda y la madera peletizada.
+    \item[b)] Calcular el \textbf{incremento en la densidad energética} si la madera se torrefacciona y luego se peletiza.
+\end{itemize}
+    
+\end{frame}
+
+
+
+\begin{frame}
+%\footnotesize
+\textbf{Cálculo del EV de la madera cruda (35\% H$_2$O):}
+\begin{align*}
+EV_{f} &= HHV_{ar} \times \rho_{ar} = \SI{12.92}{MJ.kg^{-1}} \times \SI{300}{kg.m^{-3}} \\
+       &= \SI{3876}{MJ.m^{-3}} \approx \SI{3.9}{GJ.m^{-3}}
+\end{align*}
+\text{ Pellet de Madera Cruda}
+\footnotesize
+\textbf{Cálculo del HHV en base seca y EV del pellet:}
+\begin{align*}
+HHV_{db} &= \frac{HHV_{ar}}{1-M} = \frac{12.92}{1-0.35} = \SI{19.88}{MJ.kg^{-1}} \\
+HHV_{pel,ar} &= HHV_{db} \times (1-0.07) = \SI{18.49}{MJ.kg^{-1}} \\
+EV_{pel} &= HHV_{pel,ar} \times \rho_{pel} = \SI{18.49}{MJ.kg^{-1}} \times \SI{650}{kg.m^{-3}} \\
+         &= \SI{12018}{MJ.m^{-3}} \approx \SI{12.0}{GJ.m^{-3}}
+\end{align*}
+\begin{alertblock}{Ganancia por peletización}
+Incremento de densidad energética: $\frac{12018 - 3876}{3876} \approx 2.1 \Rightarrow$ \textbf{aumento del 210\%}.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\footnotesize
+\textbf{Cálculo de la densidad energética del pellet torrefactado:}
+\begin{align*}
+\rho_{tor} &= (1 - 0.39) \times \SI{300}{kg.m^{-3}} = \SI{183.0}{kg.m^{-3}} \\
+EV_{pel,tor} &= \SI{24.59}{MJ.kg^{-1}} \times \SI{183.0}{kg.m^{-3}} = \SI{4500.0}{MJ.m^{-3}} \approx \SI{4.5}{GJ.m^{-3}}
+\end{align*}
+\begin{block}{Ganancia total}
+Comparado con la madera cruda: $\frac{4500 - 3876}{3876} \approx 0.16 \Rightarrow$ \textbf{aumento del 16\%}.
+\end{block}
+\end{frame}
+
+\begin{frame}{Densidad Energética Volumétrica Comparada}
+\footnotesize
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Material} & \textbf{Madera cruda} & \textbf{Madera torrefactada} & \textbf{Pellet crudo} & \textbf{Pellet torrefactado} \\
+\midrule
+\textbf{Densidad energética} & \SI{3876}{MJ/m^3} & \SI{4512}{MJ/m^3} & \SI{8398}{MJ/m^3} & \SI{15983}{MJ/m^3} \\
+\textbf{Densidad energética} & \SI{12.92}{MJ/kg} & \SI{24.59}{MJ/kg} & \SI{19.28}{MJ/kg} & \SI{24.59}{MJ/kg} \\
+(as-received) & & & & \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+\textbf{Incrementos en la densidad energética volumétrica:}
+\begin{itemize}
+  \item \textbf{Pelletización sola:} $\frac{8398 - 3876}{3876} \approx 2.23 \Rightarrow$ incremento del \textbf{223\%}
+  \item \textbf{Torrefacción + pelletización:} $\frac{15983 - 3876}{3876} \approx 3.12 \Rightarrow$ incremento del \textbf{312\%}
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+\section{Tecnologías y Diseño}
+
+\begin{frame}{Tecnologías de Torrefacción}
+\small
+Una planta de torrefacción típica incluye:
+\begin{itemize}
+    \item Manejo y preparación de biomasa
+    \item Secador y torrefactor (reactor de torrefacción)
+    \item Sistema de enfriamiento del producto
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{El reactor de torrefacción es el componente central.}
+
+Actualmente existen múltiples diseños ofrecidos por diversos fabricantes, clasificados según:
+\begin{itemize}
+    \item \textbf{Modo de transferencia de calor}
+    \item \textbf{Forma de contacto sólido-fluido}
+\end{itemize}
+
+\textbf{Fuente:} basada en Kleinschmidt (www.kema.com)
+\end{frame}
+
+\begin{frame}{Clasificación por Modo de Calentamiento}
+\small
+\textbf{El calentamiento es crucial en la torrefacción.} La transferencia de calor puede darse por:
+\begin{itemize}
+  \item Convección gas–partícula
+  \item Conducción pared–partícula
+  \item Calentamiento electromagnético (microondas)
+  \item Conducción partícula–partícula
+  \item Calentamiento líquido–partícula (vapor, agua a presión, aceite térmico)
+\end{itemize}
+
+\textbf{Clasificación general:}
+\begin{enumerate}
+  \item \alert{Reactores de calentamiento directo:} el medio caliente entra en contacto con la biomasa (gas sin oxígeno, vapor, sólidos calientes).
+  \item \alert{Reactores de calentamiento indirecto:} la biomasa no entra en contacto con la fuente de calor; el calor se transfiere por paredes o superficies.
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Reactores de Calentamiento Directo}
+\small
+\textbf{Características:}
+\begin{itemize}
+  \item La biomasa entra en contacto directo con el medio portador de calor.
+  \item Este medio puede ser:
+    \begin{itemize}
+      \item Gases calientes sin oxígeno (atmósfera inerte)
+      \item Gases con trazas controladas de oxígeno
+      \item Sólidos calientes (arena, carbón vegetal)
+      \item Fluidos no reactivos (aceites, vapor presurizado)
+    \end{itemize}
+  \item Transferencia de calor más rápida, lo que permite tiempos de residencia más cortos.
+  \item Mayor riesgo de oxidación si no se controla el medio.
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Reactor Convectivo (Lecho Fijo, Móvil o Arrastrado)}
+\footnotesize
+\textbf{Descripción:}
+\begin{itemize}
+  \item Utiliza un gas caliente que atraviesa o fluye alrededor de la biomasa.
+  \item Puede operar como:
+    \begin{itemize}
+      \item \textbf{Lecho fijo:} partículas estacionarias (e.g. hornos túnel no oxidantes).
+      \item \textbf{Lecho móvil:} partículas en movimiento por gravedad, disco giratorio o banda vibratoria.
+      \item \textbf{Flujo arrastrado:} biomasa fina (aserrín) transportada por gas caliente inerte.
+    \end{itemize}
+  \item Transferencia de calor: convección gas-sólido.
+\end{itemize}
+
+\begin{columns}
+  \column{0.48\textwidth}
+  \textbf{Ventajas:}
+  \begin{itemize}
+    \item Diseño versátil y ampliamente utilizado en 2025.
+    \item Alta eficiencia de transferencia de calor.
+    \item Adecuado para diferentes formas de biomasa.
+  \end{itemize}
+
+  \column{0.48\textwidth}
+  \textbf{Limitaciones:}
+  \begin{itemize}
+    \item Requiere control del contenido de oxígeno.
+    \item Puede haber formación de polvo o pérdida de sólidos finos.
+  \end{itemize}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Reactor de Lecho Fluidizado}
+\footnotesize
+\textbf{Descripción:}
+\begin{itemize}
+  \item Gas inerte caliente pasa a través de un lecho de partículas que se comporta como un fluido.
+  \item Puede usarse con partículas de biomasa o con portadores de calor granulares.
+  \item Biomasa introducida es rápidamente calentada de forma homogénea.
+\end{itemize}
+
+\textbf{Ventajas:}
+\begin{itemize}
+  \item Mezcla intensa que asegura temperatura uniforme.
+  \item Alta calidad y homogeneidad del producto torrefactado.
+  \item Ideal para operación continua.
+\end{itemize}
+
+\textbf{Limitaciones:}
+\begin{itemize}
+  \item Dificultad para separar partículas finas y portadores de calor.
+  \item Riesgo de arrastre y formación de polvo.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Reactor de Tambor Rotatorio}
+\footnotesize
+\textbf{Descripción:}
+\begin{itemize}
+  \item Tambor giratorio donde la biomasa es mezclada mientras es calentada por gas caliente.
+  \item Transferencia de calor por convección gas-partícula.
+  \item Muy utilizado en líneas comerciales de torrefacción (e.g., BioEndev, 4Energy).
+\end{itemize}
+
+\textbf{Ventajas:}
+\begin{itemize}
+  \item Buena mezcla de partículas.
+  \item Diseño mecánico simple y robusto.
+  \item Adecuado para diversas formas de biomasa.
+\end{itemize}
+
+\textbf{Limitaciones:}
+\begin{itemize}
+  \item Transferencia de calor menos uniforme que en lechos fluidizados.
+  \item Puede requerir mayor tiempo de residencia.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Reactor Hidrotérmico}
+\footnotesize
+\textbf{Descripción:}
+\begin{itemize}
+  \item Biomasa es calentada en agua caliente a presión.
+  \item Ideal para biomasa húmeda (alta \% de agua).
+  \item No requiere secado previo.
+\end{itemize}
+
+\textbf{Ventajas:}
+\begin{itemize}
+  \item Mejora la hidrofobicidad y densidad energética.
+  \item Adecuado para residuos orgánicos húmedos.
+  \item Compatible con procesos por lotes.
+\end{itemize}
+
+\textbf{Limitaciones:}
+\begin{itemize}
+  \item Alto consumo energético por presurización.
+  \item Complejidad técnica en operación continua.
+  \item Riesgo de condensación del producto final.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Reactores Calentados Indirectamente}
+  \begin{itemize}
+    \item En estos reactores, el medio portador de calor no entra en contacto directo con la biomasa.
+    \item El calor se transfiere a través de una pared o mediante radiación electromagnética.
+    \item Permiten evitar el contacto con oxígeno y, por tanto, la combustión no deseada.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Ventajas y Limitaciones}
+  \textbf{Ventajas:}
+  \begin{itemize}
+    \item El fluido calefactor puede tener cualquier temperatura mayor.
+    \item Los gases volátiles no se diluyen con el medio calefactor.
+    \item Se pueden quemar por separado para apoyar la carga térmica.
+  \end{itemize}
+
+  \textbf{Limitaciones:}
+  \begin{itemize}
+    \item La conducción de calor lenta genera gradientes de temperatura.
+    \item El calentamiento puede ser no uniforme, especialmente en microondas.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Tambor Rotatorio}
+  \begin{itemize}
+    \item Utiliza un tambor giratorio calentado indirectamente.
+    \item La biomasa se tumba en un medio gaseoso inerte.
+    \item El calor se transfiere desde las paredes calientes hacia las partículas de biomasa.
+    \item El secado se realiza generalmente por separado.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Tambor Rotatorio – Versión Alternativa}
+  \begin{itemize}
+    \item La biomasa está en contenedores térmicamente conductores.
+    \item Se desplazan lentamente por un horno caliente con atmósfera inerte.
+    \item El calor se conduce hacia la biomasa a través de las paredes del contenedor.
+    \item Tiempo de residencia alto (del orden de horas) por bajo coeficiente de transferencia térmica.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Tornillo Rotatorio o Eje Estacionario}
+  \begin{itemize}
+    \item El reactor es estacionario (sección circular o rectangular).
+    \item Se calienta externamente para evitar contacto con gases calientes.
+    \item Un tornillo giratorio mueve y agita la biomasa.
+    \item Mejora la transferencia de calor y el desplazamiento del material.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Reactor de Microondas – Fundamentos}
+  \begin{itemize}
+    \item Irradiación electromagnética (300 MHz a 300 GHz, típicamente 2.45 GHz).
+    \item Calentamiento interno eficiente por:
+    \begin{itemize}
+      \item Polarización dipolar
+      \item Conducción iónica
+    \end{itemize}
+    \item El calentamiento depende de la capacidad de absorción de microondas.
+    \item La biomasa absorbe microondas; los metales las reflejan.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Reactor de Microondas – Características del Proceso}
+  \begin{itemize}
+    \item Calentamiento interno simultáneo de toda la biomasa expuesta.
+    \item Puede generar gradientes térmicos importantes en partículas grandes.
+    \item Resultados de torrefacción muy rápidos (en segundos).
+    \item Rendimientos energéticos observados: 67–90% con recuperación total de 79–88%.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Clasificación según el Modo de Mezcla Gas–Sólido}
+  En plantas de procesamiento químico, los reactores se clasifican frecuentemente por el modo de contacto gas–sólido, lo cual permite comprender mejor la mezcla, un aspecto clave para su funcionamiento. Los principales modos son:
+
+  \begin{enumerate}
+    \item \textbf{Flujo pistón (Plug flow):} el gas percola a través de sólidos estáticos; ambos se mueven en una única dirección.
+    \item \textbf{Mezcla parcial (Partial back-mixed):} como en lechos fluidizados, donde el gas se mueve unidireccionalmente, pero los sólidos se mezclan hacia atrás.
+    \item \textbf{Rotación o volteo (Tumbling):} los sólidos giran o se agitan en un tambor o túnel cilíndrico.
+    \item \textbf{Arrastre (Entrained):} los sólidos son transportados neumáticamente por el gas.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Reactores (1/3)}
+\begin{minipage}{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{Energias Alternativas/3-Biomass/img/Raw_miving.png}
+    \captionof{figure}{Lecho móvil de biomasa}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{Energias Alternativas/3-Biomass/img/Microwave_reactor.png}
+    \captionof{figure}{Reactor de microondas}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Reactores (2/3)}
+\begin{minipage}{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{Energias Alternativas/3-Biomass/img/multiple_hearth_furnace.png}
+    \captionof{figure}{Horno de hogar múltiple}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{Energias Alternativas/3-Biomass/img/Oscillating_belt_reactor.png}
+    \captionof{figure}{Reactor de banda oscilante}
+\end{minipage}
+\end{frame}
+\begin{frame}{Reactores (3/3)}
+\centering
+\includegraphics[width=0.5\linewidth]{Energias Alternativas/3-Biomass/img/Rotary_drum_reactor.png}
+\captionof{figure}{Reactor de tambor rotatorio}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Clasificación de reactores}
+\small
+\centering
+\begin{tabular}{|p{2.5cm}|p{4cm}|p{4cm}|}
+\hline
+\textbf{Tipo de reactor} & \textbf{Ventajas principales} & \textbf{Limitaciones} \\ \hline
+Convectivo lecho móvil & Simple, bajo CAPEX, escalable & Gradientes T, dilución de volátiles \\ \hline
+Fluidizado & Producto uniforme, buen control & Separación sólidos, arrastre de finos \\ \hline
+Hidrotermal & No requiere secado, ideal biomasa húmeda & Coste energético de presión, batch \\ \hline
+Indirecto (tambor, tornillo) & Sin dilución de gases, control \ce{O2} & Baja conductividad, residencias largas \\ \hline
+Microondas & Calentamiento rápido, interno & Gradientes, potencia limitada, costo \\ \hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Enfoque de Diseño de Planta}
+El proceso completo se divide en cinco etapas; por conveniencia se agrupan en tres unidades funcionales:
+\begin{enumerate}
+  \item Secado de la materia prima.
+  \item Torrefacción de la materia prima seca.
+  \item Enfriamiento del producto torrefactado.
+\end{enumerate}
+Cada unidad requiere un suministro de calor específico y controlado.
+\end{frame}
+
+\begin{frame}{Diagrama de flujo del proceso}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\linewidth]{Energias Alternativas/3-Biomass/img/torrefaction system.png}
+  \caption{Sistema de torrefacción integrado.}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\linewidth]{Energias Alternativas/3-Biomass/img/Reactor de lecho móvil de un solo eje.png}
+        \caption{Unidad Integrada de Torrefacción Calentada Directamente}
+       % \label{fig:enter-label}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Métodos de Diseño}
+  Esta sección presenta un método simplificado para el diseño de una planta de torrefacción.
+
+  \textbf{Etapas principales:}
+  \begin{itemize}
+    \item Selección del tipo de reactor.
+    \item Diseño del resto de la planta según la elección del reactor.
+    \item Estimación de la energía requerida en cada etapa.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Estimaciones de Energía por Etapa}
+  \begin{itemize}
+    \item \textbf{Astillado de madera:} 180–2360 kJ/kg de madera.
+    \item \textbf{Molienda:} 270–450 kJ/kg de biomasa.
+    \item \textbf{Secado:} 3000–9000 kJ/kg de agua removida.
+    \item \textbf{Torrefacción:} 130–350 kJ/kg de madera torrefactada.
+  \end{itemize}
+  \small Fuente: Cielkosz y Wallace (2011), estimaciones propias.
+\end{frame}
+
+\begin{frame}{Elección del Tipo de Reactor}
+  La selección del reactor depende de múltiples factores:
+
+  \begin{itemize}
+    \item Costo de capital vs. costo operativo.
+    \item Rendimiento del producto.
+    \item Compatibilidad con la biomasa disponible.
+    \item Requerimientos de inversión.
+  \end{itemize}
+
+  \textbf{Nota:} Una selección balanceada debe considerar todos los criterios con el peso adecuado.
+\end{frame}
+
+\begin{frame}{Enfoque de Diseño – Planta Continua}
+  El proceso de torrefacción se divide funcionalmente en tres unidades:
+
+  \begin{enumerate}
+    \item Secado de la biomasa en el secador.
+    \item Torrefacción en el reactor torrefactor.
+    \item Enfriamiento del producto en el sistema de enfriamiento.
+  \end{enumerate}
+
+  Cada unidad tiene una demanda energética específica.
+\end{frame}
+
+\begin{frame}{Tiempo de Residencia y Enfriamiento}
+  \begin{itemize}
+    \item La torrefacción es un proceso lento: requiere tiempo de residencia prolongado.
+    \item Se necesita un volumen adecuado en el reactor para asegurar este tiempo.
+    \item El producto sale caliente y debe enfriarse antes del almacenamiento.
+    \item Esto se realiza en un enfriador integrado o zona de enfriamiento.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Parámetros Clave para el Diseño}
+  Para lograr propiedades deseadas del producto (poder calorífico, hidrofobicidad, facilidad de molienda), se deben conocer:
+
+  \begin{enumerate}
+    \item \textbf{Temperatura de torrefacción}
+    \item \textbf{Tiempo de residencia en el torrefactor}
+  \end{enumerate}
+
+  Estos parámetros se obtienen mediante:
+  \begin{itemize}
+    \item Pruebas piloto o de laboratorio.
+    \item Literatura científica.
+    \item Experiencia en plantas similares.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Ejemplo Ilustrativo}
+  Se ilustra el diseño con una planta simple:
+
+  \begin{itemize}
+    \item La energía del proceso es suministrada por un quemador de aceite.
+    \item Para simplificar, se asume que los volátiles liberados no se reutilizan.
+  \end{itemize}
+
+  \textbf{Objetivo:} Estimar los requerimientos energéticos y dimensionar el sistema.
+\end{frame}
+
+
+
+
+\begin{frame}{Parámetros de Entrada del Diseño}
+  \begin{itemize}
+    \item \textbf{Capacidad del torrefactor ($W_t$):} kg/s de madera torrefactada (incluye cenizas y humedad).
+    \item \textbf{Rendimiento másico deseado ($MY_{daf}$)}
+    \item \textbf{Fracción de humedad de la biomasa cruda ($M$)}
+    \item \textbf{Fracción de cenizas de la biomasa cruda ($ASH$)}
+    \item \textbf{Valores correspondientes en el producto torrefactado: $M'$, $ASH'$}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Balance de Masa – Flujo de Alimentación}
+  \small
+  A partir de la capacidad deseada $W_t$, se calcula el flujo de biomasa cruda ($W_f$) y de biomasa seca ($W_d$).
+
+  \vspace{0.3cm}
+  Masa base seca libre de cenizas:
+  \[
+    W_{t,daf} = W_t (1 - M' - ASH') = MY_{daf} \cdot W_{daf}
+  \]
+  Donde:
+  \[
+    W_{daf} = W_f (1 - M - ASH)
+  \]
+
+  \textbf{Sustituyendo:}
+  \[
+    W_f = \frac{W_t (1 - M' - ASH')}{MY_{daf}(1 - M - ASH)} \si{\kilogram /s}
+  \]
+\end{frame}
+
+
+
+\begin{frame}{Conservación de Cenizas}
+  \begin{itemize}
+    \item Se supone que la cantidad absoluta de ceniza no cambia con la torrefacción.
+    \item Por lo tanto, se cumple:
+    \[
+      W_t \cdot ASH' = W_f \cdot ASH
+    \]
+    \item Esta ecuación ayuda a verificar la consistencia del balance másico.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Ejemplo – Diseño de un Torrefactor de Lecho Móvil}
+  \textbf{Objetivo:} Diseñar un torrefactor de lecho móvil para producir 1 tonelada/h (base seca libre de cenizas) de biomasa torrefactada.
+
+  \textbf{Datos:}
+  \begin{itemize}
+    \item Humedad en biomasa cruda: 30\%
+    \item Cenizas: despreciables
+    \item Temperatura de torrefacción: 280\textdegree C
+    \item Rendimiento másico en base seca libre de cenizas (daf): 70\%
+    \item Entrada de biomasa y aire: 20\textdegree C
+    \item Gas caliente sale a: 105\textdegree C
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paso 1 – 2 Conversión de la capacidad a kg/s}
+  \textbf{Capacidad deseada:}
+  \[
+    W_t = \frac{1000 \text{ kg/h}}{3600 \text{ s/h}} = 0.277 \text{ kg/s}
+  \]
+  Esta es la producción de biomasa torrefactada en base seca libre de cenizas.
+\textbf{Paso 2 – Cálculo del flujo de biomasa cruda ($W_f$)}
+  Usando la ecuación:
+  \[
+    W_f = \frac{W_t}{MY_{daf}(1 - M - ASH)}
+  \]
+  Sustituyendo los valores:
+  \[
+    W_f = \frac{0.277}{0.70 \cdot (1 - 0.30 - 0)} = 0.566 \text{ kg/s}
+  \]
+  \textbf{Resultado:} Se requiere alimentar 0.566 kg/s de biomasa cruda.
+\end{frame}
+
+\begin{frame}{Paso 3 – 4 Cálculo de la humedad en la biomasa cruda}
+  \[
+    W_v = W_f \cdot M = 0.566 \cdot 0.30 = 0.17 \text{ kg/s}
+  \]
+  \textbf{Resultado:} La biomasa cruda contiene 0.17 kg/s de humedad.
+
+
+\textbf{Paso 4 – Cálculo de la biomasa seca ($W_d$)}
+  \[
+    W_d = W_f \cdot (1 - M) = 0.566 \cdot 0.70 = 0.396 \text{ kg/s}
+  \]
+  \textbf{Resultado:} Se obtiene 0.396 kg/s de biomasa seca que entra al torrefactor.
+\textbf{Paso 5 – Cálculo del flujo de volátiles liberados}
+  \[
+    W_{vl} = W_f - W_t - M \cdot W_f
+  \]
+  \[
+    W_{vl} = 0.566 - 0.277 - (0.30 \cdot 0.566) = 0.118 \text{ kg/s}
+  \]
+  \textbf{Resultado:} Se liberan 0.118 kg/s de volátiles durante la torrefacción.
+\end{frame}
+
+
+\begin{frame}{Etapas del Secado de Biomasa}
+  El calentamiento de la biomasa hasta la temperatura de torrefacción $T_t$ se realiza en tres etapas:
+
+  \begin{enumerate}
+    \item \textbf{Precalentamiento:} $Q_{ph} = W_f C_{pw}(100 - T_0)$
+    \item \textbf{Evaporación de humedad:} $Q_{dr} = W_f M L$ con $L = 2260$ kJ/kg
+    \item \textbf{Post-secado:} $Q_{pd} = W_d C_{pd}(T_t - 100)$
+  \end{enumerate}
+
+  Energía total del secado:
+  \[
+    Q_d = Q_{ph} + Q_{dr} + Q_{pd}  [ \si{\kilo\watt}]
+  \]
+  donde \( C_{pw} \) y \( C_{pd} \) son los calores específicos de la biomasa húmeda y de la biomasa seca, respectivamente.
+
+\end{frame}
+
+\begin{frame}{Carga Térmica Real del Secador}
+  Considerando pérdidas térmicas del secador ($X_d$):
+
+  \[
+    Q'_d = \frac{Q_d}{1 - X_d}
+  \]
+
+  Para el torrefactor, se desprecia el calor de reacción, y se considera solo la pérdida:
+
+  \[
+    Q'_T = Q_{tL}
+  \]
+
+  Carga total de calor del sistema:
+  \[
+    Q_{total} = Q'_d + Q'_T
+  \]
+\end{frame}
+
+\begin{frame}{Sistema de Enfriamiento}
+  El producto se enfría desde $T_t$ hasta $T_c \approx 50^\circ$C:
+
+  \[
+    Q_c = W_t C_d (T_t - T_c)
+  \]
+
+  Parte del calor puede reutilizarse para precalentar el aire del quemador:
+
+  \[
+    W_{air} C_{air} (T_0' - T_0) = (1 - X_c) Q_c
+  \]
+\end{frame}
+
+\begin{frame}{Balance Energético del Gas Caliente}
+  Mezcla de gases de combustión con recirculación:
+
+  \[
+    W'_g = W_f + W_g - W_t
+  \]
+  \[
+    W_g = x W'_g + W_{oil} + W_{air}
+  \]
+
+  Cálculo del flujo de gas caliente:
+
+  \[
+    W_g = \frac{A}{C_g (T_{gi} - T_{g0})}  \si{\kilogram/s}
+  \]
+
+  Donde:
+  \[
+    A = (W_v C_v + W_{vl} C_g)T_{g0} + W_t C_d T_t - W_f C_b T_0 + W_v L + \text{Pérdidas}
+  \]
+  \( C_v \) es el calor específico del vapor de agua y \( C_g \) es el calor específico promedio de los gases de combustión entre \( 300\,^\circ\mathrm{C} \) y \( T_{g0} \).
+
+\end{frame}
+
+
+\begin{frame}{Consumo de Aceite – Balance del Quemador}
+  \[
+    W_{oil} = \frac{1}{K - P} \cdot \frac{W_g}{W'_g} \left[\frac{C_g T_{gi}}{C_g T_{g0} + VL'_{fr} LHV_{vl}}-1\right]
+  \]
+
+  Donde:
+  \[
+    VL'_{fr} = \frac{W_{vl}}{W'_g}, \quad K = \frac{\alpha (A/F) C_a T_0' + LHV \cdot \eta + C_{oil} T''_o} {W'_g C_g T_{g0} + W_{vl} LHV_{vl} \eta}
+  \]
+\end{frame}
+
+\begin{frame}{Balance y diseño de secciones del torrefactor}
+\small
+\begin{itemize}
+    \item Los cálculos anteriores permiten establecer el balance de masa y energía del sistema.
+    \item Ahora se determinan los tamaños de las secciones funcionales del torrefactor que aseguren la transferencia de masa y calor requerida.
+    \item Se considera un \textbf{torrefactor de lecho móvil}, caracterizado por:
+    \begin{itemize}
+        \item Flujo uniforme descendente de sólidos.
+        \item Flujo ascendente de gases a través de un eje vertical de sección transversal uniforme.
+    \end{itemize}
+    \item El gas caliente \( W_g \) entra por la base a temperatura \( T_{gi} \) y junto con otros productos gaseosos sale por la parte superior del secador a \( T_{g0} \).
+    \item La biomasa fresca \( W_f \) entra por la parte superior del secador a \( T_0 \), y la biomasa torrefactada caliente \( W_t \) sale por la base a \( T_t \).
+\end{itemize}
+\end{frame}
+\begin{frame}{Área de transferencia de calor:}
+    \textbf{Área de transferencia de calor:}
+
+\[
+S_r = (1 - \varepsilon_p) V_r S_p 
+\]
+
+\begin{itemize}
+    \item Donde \( V_r \): volumen del reactor, \( \varepsilon_p \): fracción de huecos, \( S_p = \frac{A_p}{V_p} \): relación superficie-volumen de las partículas.
+    \item \( S_p \) depende de la forma de las partículas de biomasa.
+\end{itemize}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Sección de Predesecado: Descripción del Proceso}
+\small
+\begin{itemize}
+    \item En la sección de predesecado, el gas caliente entra por la parte inferior a temperatura \( T_{g3} \) y sale por la parte superior a \( T_{g0} \).
+    \item La biomasa entra por la parte superior a \( T_0 \) y se calienta hasta alcanzar \( 100\,^\circ\mathrm{C} \) al salir por la base.
+    \item La transferencia de calor ocurre entre el gas y las partículas de biomasa a través de una diferencia de temperatura media logarítmica (LMTD).
+\end{itemize}
+\vspace{0.5em}
+\textbf{Diferencia media logarítmica de temperatura (LMTD):}
+\[
+\text{LMTD} = 
+\frac{(T_{g3} - 100) - (T_{g0} - T_0)}{\ln \left( \frac{T_{g3} - 100}{T_{g0} - T_0} \right)} 
+\]
+\end{frame}
+
+
+\begin{frame}{Sección de Predesecado: Transferencia de Calor}
+\small
+\begin{itemize}
+    \item Si \( U_t \) es el coeficiente global de transferencia de calor partícula-gas, el calor transferido a la biomasa \( Q_{ph} \) es:
+\end{itemize}
+
+\[
+Q_{ph} = U_t \, S_{r,ph} \, \text{LMTD}_{ph} 
+\]
+
+\begin{itemize}
+    \item Donde:
+    \begin{itemize}
+        \item \( S_{r,ph} \): área superficial total de partículas en la sección de predesecado.
+        \item \( \text{LMTD}_{ph} \): diferencia de temperatura media logarítmica.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Sección de Predesecado: Cálculo del Volumen}
+\small
+\begin{itemize}
+    \item Utilizando la relación entre área superficial y volumen ocupados por las partículas , el volumen mínimo requerido es:
+\end{itemize}
+
+\[
+V_{r,ph} = \frac{Q_{ph}}{U_t \, \text{LMTD}_{ph}} \cdot \frac{1}{S_p (1 - \varepsilon_p)} 
+\]
+
+\begin{itemize}
+    \item Donde:
+    \begin{itemize}
+        \item \( S_p \): relación superficie-volumen de las partículas.
+        \item \( \varepsilon_p \): fracción de huecos.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Sección de Predesecado: Cálculo de Altura}
+\small
+\begin{itemize}
+    \item Si \( A_r \) es el área de la sección transversal del reactor, la altura mínima requerida para la sección de predesecado es:
+\end{itemize}
+
+\[
+L_{ph} = \frac{V_{r,ph}}{A_r}
+\]
+
+\begin{itemize}
+    \item Además del volumen, existen otras dos condiciones que deben cumplirse en sistemas de lecho móvil:
+    \begin{enumerate}
+        \item Tiempo de residencia suficiente de la biomasa.
+        \item Flujo adecuado de gas para mantener la transferencia térmica.
+    \end{enumerate}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Condiciones Adicionales en un Lecho Móvil}
+  Además del volumen, se deben cumplir dos condiciones clave:
+
+  \begin{enumerate}
+    \item El sólido debe moverse por gravedad con una velocidad espacial aceptable $U_s$, para garantizar el tiempo de residencia requerido.
+    \item La velocidad ascendente del gas no debe ser tan alta como para arrastrar partículas finas.
+  \end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Velocidad del Sólido y Área Mínima del Reactor}
+  \begin{itemize}
+    \item Velocidad espacial típica $U_s$: entre 0.5 y 5.0 m/h (valor de referencia de gasificadores).
+    \item El cálculo se realiza con el flujo de biomasa cruda $W_f$, no con $W_t$.
+  \end{itemize}
+
+  Área mínima de sección transversal:
+  \[
+    A_r = \frac{W_f}{U_s \cdot \rho_{\text{bulk}}}
+  \]
+
+  Donde:
+  \begin{itemize}
+    \item $\rho_{\text{bulk}}$ = densidad aparente de la biomasa.
+    \item $W_f$ = flujo másico de biomasa cruda [kg/s]
+    \item $U_s$ = velocidad espacial del sólido [m/s]
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Velocidad Superficial del Gas Ascendente}
+  La velocidad del gas debe ser tal que no fluidice ni arrastre partículas finas.
+
+  Se calcula como:
+  \[
+    U_g = \frac{W'_g}{\rho_g \cdot A_r}
+  \]
+
+  Donde:
+  \begin{itemize}
+    \item $W'_g$ = flujo másico total de gases [kg/s]
+    \item $\rho_g$ = densidad del gas a temperatura promedio
+    \item $A_r$ = área de sección transversal [m\textsuperscript{2}]
+  \end{itemize}
+  Temperatura promedio del gas:
+  \[
+    T_{\text{prom}} = \frac{T_{g3} + T_{g0}}{2}
+  \]
+\end{frame}
+
+\begin{frame}{Velocidad Relativa Gas–Sólido}
+  La velocidad relativa gas–sólido se define como:
+
+  \[
+    U_{\text{rel}} = U_g + U_s
+  \]
+
+  \textbf{Condición de seguridad:} $U_{\text{rel}}$ no debe superar la velocidad de arrastre de partículas finas ni la velocidad mínima de fluidización.
+
+  \vspace{0.5em}
+  Esta condición asegura un flujo estable de biomasa sin pérdida de material fino.
+\end{frame}
+
+
+\begin{frame}{Secciones de Secado y Postsecado}
+  \begin{itemize}
+    \item Ambas secciones se diseñan mediante el mismo método que la de precalentamiento.
+    \item Se calcula la diferencia media logarítmica de temperatura (LMTD) usando los datos térmicos.
+    \item Luego se aplica:
+    \[
+      Q = U_t S_r \cdot \text{LMTD}
+    \]
+    \item Finalmente se determina el volumen requerido:
+    \[
+      V_r = \frac{Q}{U_t \cdot \text{LMTD}} \cdot \frac{1}{S_p (1 - \varepsilon_p)}
+    \]
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Zona de Torrefacción – Consideraciones}
+  \begin{itemize}
+    \item A diferencia del secado, aquí se requiere cumplir un \textbf{tiempo mínimo de residencia} para garantizar la conversión.
+    \item La velocidad espacial del sólido es muy baja.
+    \item Se diseña con base en la producción deseada y el tiempo requerido por la reacción.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Cálculo del Volumen de la Zona de Torrefacción}
+  El volumen necesario se calcula mediante:
+
+  \[
+    V_{\text{tor}} = \frac{\tau \cdot W_t}{\rho_{\text{bulk}}}
+  \]
+
+  Donde:
+  \begin{itemize}
+    \item $\tau$ = tiempo de residencia requerido [s]
+    \item $W_t$ = flujo másico de biomasa torrefactada [kg/s]
+    \item $\rho_{\text{bulk}}$ = densidad aparente de la biomasa [kg/m\textsuperscript{3}]
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Altura de la Zona de Torrefacción}
+  A partir del volumen, la altura se obtiene como:
+
+  \[
+    L_{\text{tor}} = \frac{V_{\text{tor}}}{A_r}
+  \]
+
+  Donde:
+  \begin{itemize}
+    \item $A_r$ = área de sección transversal del reactor [m\textsuperscript{2}]
+    \item $L_{\text{tor}}$ = altura de la zona de torrefacción [m]
+  \end{itemize}
+
+  \textbf{Nota:} Se busca una baja velocidad del sólido para permitir la permanencia suficiente en esta zona.
+\end{frame}
+
+
+\begin{frame}{Diagrama}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{Energias Alternativas/3-Biomass/img/diagrama_temperatura del gas y la biomasa.png}
+    \caption{diagrama cualitativo de la distribución de temperatura del gas y la biomasa}
+    %\label{fig:enter-label}
+\end{figure}
+    
+\end{frame}
+
+
+
+
+\begin{frame}[allowframebreaks]{Dimensionamiento de la unidad – Reactor de lecho móvil}
+\small
+Consideremos un torrefactor de lecho móvil sencillo.
+\textbf{Área superficial de transferencia de calor}, $S_r$:
+\[S_r = (1-\varepsilon_p)\,V_r\,S_p\]
+
+donde $S_p = A_p/V_p$ es la relación superficie–volumen de las partículas, y $\varepsilon_p$ es la porosidad del lecho.
+
+\textbf{Diferencia de temperatura media logarítmica} (LMTD):
+\begin{equation}
+\text{LMTD} = \frac{\Delta T_1 - \Delta T_2}{\ln(\Delta T_1 / \Delta T_2)}
+\end{equation}
+
+El \textbf{volumen mínimo} de una sección, $V_{r,seccion}$, es:
+\begin{equation}
+V_{r,seccion}=\frac{Q_{seccion}}{U_t\,\text{LMTD}_{seccion}}\,\frac{1}{S_p(1-\varepsilon_p)}
+\end{equation}
+
+\framebreak
+\textbf{Restricciones en un lecho móvil}
+\begin{enumerate}
+\item \emph{Velocidad espacial de los sólidos} ($U_s$). Para un caudal $W_f$:
+\[A_r=\frac{W_f}{U_s\,\rho_{\text{bulk}}}\]
+
+donde $\rho_{\text{bulk}}$ es la densidad aparente.
+
+\item \emph{Velocidad superficial del gas} ($U_g$). Debe evitar la fluidización:
+
+\[U_g = \frac{W'_g}{\rho_g\,A_r}\]
+donde $\rho_g$ es la densidad del gas.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Dimensionamiento de la zona de torrefacción}
+\footnotesize
+Se dimensiona para garantizar:
+\begin{itemize}
+  \item El \textbf{tiempo de residencia sólido} requerido $(\tau)$.
+  \item El \textbf{rendimiento} de biomasa torrefactada deseado.
+\end{itemize}
+\begin{block}{Volumen mínimo de la zona de torrefacción}
+\[
+V_{\text{tor}}=\frac{\tau\,W_t}{\rho_{\text{bulk}}}
+\]
+\end{block}
+\begin{block}{Altura de la zona de torrefacción}
+\[
+L_{\text{tor}}=\frac{V_{\text{tor}}}{A_r}
+\]
+\end{block}
+\textbf{Definiciones:}
+\begin{itemize}
+  \item $W_t$: tasa de producción de biomasa torrefactada (\si{kg.s^{-1}}).
+  \item $\rho_{\text{bulk}}$: densidad aparente de la biomasa (\si{kg.m^{-3}}).
+  \item $A_r$: área transversal del reactor (\si{m^2}).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo: Consumo de Aceite y Recirculación de Gas}
+\footnotesize
+En el Ejemplo, el gas caliente proveniente de un quemador de aceite se diluye con gases de combustión reciclados para reducir su temperatura a \textbf{300\textdegree C}, y luego se introduce por la parte inferior del torrefactor.
+
+\textbf{Datos conocidos:}
+\begin{itemize}
+  \item Poder calorífico del aceite: \textbf{45.5 MJ/kg}
+  \item Exceso de aire del quemador: \textbf{20\%}
+  \item Eficiencia del quemador: \textbf{95\%}
+  \item Calor latente de vaporización: \textbf{2260 kJ/kg}
+\end{itemize}
+
+\textbf{Supuestos:} No se consideran pérdidas de calor.
+
+\textbf{Objetivo:}
+\begin{enumerate}
+  \item Calcular la \textbf{cantidad de aceite consumido} para suministrar la energía necesaria.
+  \item Determinar \textbf{qué fracción del gas de combustión} debe ser \textbf{reciclada} a través del quemador para alcanzar la temperatura deseada.
+\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}{Ejemplo de Diseño: Caudales Másicos}
+\small
+\textbf{Paso 1: Producción deseada ($W_t$)}
+\[
+W_t = \SI{1}{\tonne\per\hour} = \frac{\SI{1000}{\kilogram}}{\SI{3600}{\second}} = \SI{0.278}{\kilogram\per\second}
+\]
+\textbf{Paso 2: Caudal de biomasa cruda ($W_f$)}
+\[
+W_f=\frac{W_t}
+     {MY_{\text{daf}}\,(1-M)}
+   =\frac{\num{0.278}}{\num{0.70} \times (1-\num{0.30})}
+   = \SI{0.567}{\kilogram\per\second}
+\]
+\textbf{Paso 3: Humedad removida ($W_v$) y biomasa seca ($W_d$)}
+\begin{align*}
+W_v &= M \times W_f = \num{0.30} \times \num{0.567} = \SI{0.170}{\kilogram\per\second} \\
+W_d &= (1-M) \times W_f = \num{0.70} \times \num{0.567} = \SI{0.397}{\kilogram\per\second}
+\end{align*}
+\textbf{Paso 4: Volátiles liberados ($W_{vl}$)}
+\[
+W_{vl} = W_d - W_t = \num{0.397} - \num{0.278} = \SI{0.119}{\kilogram\per\second}
+\]
+\end{frame}
+
+\begin{frame}{Carga Térmica del Proceso}
+\small
+\textbf{Calor de precalentamiento ($Q_{ph}$):}
+\begin{align*}
+Q_{ph} &= W_f C_{b} (100-T_0) \\
+       &= \num{0.567} \times \num{1.46} \times (100-20) = \SI{66.2}{\kilo\watt}
+\end{align*}
+\textbf{Calor de secado ($Q_{dry}$):}
+\begin{align*}
+Q_{dry} &= W_v \times L = \num{0.170} \times \num{2260} = \SI{384.2}{\kilo\watt}
+\end{align*}
+\textbf{Calor de post-secado ($Q_{pd}$):}
+\begin{align*}
+Q_{pd} &= W_d C_{d} (T_t - 100) \\
+       &= \num{0.397} \times \num{0.269} \times (280-100) = \SI{19.2}{\kilo\watt}
+\end{align*}
+\begin{alertblock}{Carga Térmica Total (sin pérdidas)}
+\[
+Q_{\text{total}} = Q_{ph} + Q_{dry} + Q_{pd} = 66.2 + 384.2 + 19.2 = \SI{469.6}{\kilo\watt}
+\]
+\end{alertblock}
+\end{frame}
+
+
+\begin{frame}{Diseño del Quemador – Datos Iniciales}
+\begin{itemize}
+  \item Temperatura de entrada del gas al torrefactor: $T_{gi} = 300\,^\circ$C
+  \item Temperatura de torrefacción: $T_t = 280\,^\circ$C
+  \item Temperatura de salida del gas: $T_{g0} = 105\,^\circ$C
+  \item Temperatura ambiente: $T_0 = 20\,^\circ$C
+  \item Relación aire/combustible teórica: $(A/F)_{\text{teo}} = 14.6$
+  \item Eficiencia del quemador: $\eta = 0.95$
+  \item Poder calorífico inferior del aceite: $LHV_{\text{oil}} = 45{,}500$ kJ/kg
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Cálculo del Flujo de Gas de Combustión al Torrefactor}
+La cantidad de gas de combustión $W_g$ que se alimenta al torrefactor se calcula con:
+
+\[
+W_g = \frac{A}{C_g (T_{gi} - T_{g0})}
+\]
+
+\textbf{Donde:}
+\[
+A = (W_v C_v + W_{vl} C_g) T_{g0} + W_t C_d T_t - W_f C_b T_0 + W_v L
+\]
+
+\textbf{Datos:}
+\begin{itemize}
+  \item $T_{gi} = 300\,^\circ$C \quad (Entrada de gas)
+  \item $T_t = 280\,^\circ$C \quad (Torrefacción)
+  \item $T_{g0} = 105\,^\circ$C \quad (Salida del gas)
+  \item $L = 2260$ kJ/kg \quad (Calor latente de vaporización)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Cálculo de $W_g$ y $W_g^0$}
+\textbf{Cálculo de la energía total $A$:}
+\[
+A = (0.173 \cdot 1.89 + 0.119 \cdot 1.13) \cdot 105 + 0.277 \cdot 0.269 \cdot 280 - 0.566 \cdot 1.463 \cdot 20 + 0.173 \cdot 2260
+\]
+
+\textbf{Resultado:} $A = 436.4$ kJ/s
+
+\textbf{Cálculo del flujo de gas caliente $W_g$:}
+
+\[
+W_g = \frac{A}{C_g (T_{gi} - T_{g0})} = \frac{436.4}{1.13 \cdot (300 - 105)} = 1.98 \text{ kg/s}
+\]
+
+\textbf{Cálculo del flujo de gas de salida $W_g^0$:}
+
+\[
+W'_g = W_f + W_g - W_t = 0.566 + 1.98 - 0.277 = 2.27 \text{ kg/s}
+\]
+\end{frame}
+
+\begin{frame}{Cálculo del Consumo de Aceite}
+Para calcular el consumo de aceite:
+
+\[
+W_{\text{oil}} = \frac{1}{K - P} \cdot \frac{W_g}{W'_g} \cdot\left[ \frac{C_g T_{gi}}{C_g T_{g0} + VL'_{fr} \cdot LHV_{vl} \cdot \eta} - 1\right]
+\]
+
+\textbf{Datos:}
+
+\begin{itemize}
+\footnotesize
+  \item $W_g = 1.99$ kg/s (flujo de gas caliente)
+  \item $W_v = 0.17$ kg/s (agua evaporada)
+  \item $W_{vl} = 0.119$ kg/s (volátiles liberados)
+  \item $W'_g = 2.27$ kg/s (flujo total de gas de salida)
+  \item Coeficiente de exceso de aire: $\alpha = 1 + 0.25 = 1.2$
+  \item Fracción de volátiles generados:
+  \[
+    VL'_{fr} = \frac{W_{vl}}{W'_g} = \frac{0.119}{2.27} = 0.052
+  \]
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Cálculo del Consumo de Aceite y Recirculación}
+\textbf{Cálculo de los parámetros intermedios:}
+
+\[
+K = \frac{[(A/F) \cdot \alpha] \cdot C_{air} \cdot T_0 + LHV \cdot \eta + C_{oil} \cdot T_0}
+{W'_g \cdot C_g \cdot T_{g0} + W_{vl} \cdot LHV_{vl} \cdot \eta}
+\]
+\[= \frac{(14.6 \cdot 1.2 \cdot 1.006 \cdot 20 + 45500 \cdot 0.95 + 1.73 \cdot 20)}
+{2.27 \cdot 1.13 \cdot 105 + 0.119 \cdot 1286 \cdot 0.95} = 105.1\]
+\[
+P = \frac{[(A/F) \cdot \alpha] + 1}{W'_g} = \frac{14.6 \cdot 1.2 + 1}{2.27} = 8.16
+\]
+
+\end{frame}
+
+\begin{frame}{Consumo de Aceite y Recirculación de Gas}
+\textbf{Consumo de aceite:}
+
+\[
+W_{\text{oil}} =
+\frac{1}{104.9 - 8.13} \cdot 
+\frac{1.98}{2.27} \cdot 
+\left( \frac{1.13 \cdot 400}{1.13 \cdot 105 + 0.0793 \cdot 1286 \cdot 0.95} - 1 \right)
+= 0.0077 \, \text{kg/s}
+\]
+
+\vspace{1em}
+\textbf{Fracción de gas de combustión recirculado:}
+
+Según la ecuación, la fracción de recirculación se calcula como:
+
+\[
+X = \frac{W_g - W_{\text{oil}} \cdot [(A/F) \cdot \alpha + 1]}{W'_g}
+= \frac{1.99 - 0.0077 \cdot (14.6 \cdot 1.2 + 1)}{2.27} = 0.81
+\]
+
+\vspace{0.5em}
+\textbf{Porcentaje de recirculación de gas:} \quad \textbf{81\%}
+\end{frame}
+
+\begin{frame}{Interpretación: Eficiencia Energética}
+\small
+\begin{itemize}
+  \item El sistema requiere un suministro térmico de aproximadamente \textbf{470 kW}, según el balance de energía (sin pérdidas).
+  \item El consumo de aceite calculado es de solo \textbf{0.0077 kg/s}, lo que equivale a aproximadamente \textbf{1 kg cada 2 minutos}.
+  \item Esto es posible gracias al \textbf{alto poder calorífico del aceite} ($LHV = \SI{45.5}{MJ/kg}$) y a una \textbf{eficiencia del quemador del 95\%}.
+  \item Además, el sistema recupera y recircula el \textbf{81\% del gas de combustión}, reduciendo así la demanda térmica neta.
+  \item Esta recirculación permite controlar la temperatura de entrada ($T_{gi}$) y evitar ignición espontánea, mejorando la \textbf{seguridad y estabilidad térmica}.
+\end{itemize}
+
+\begin{alertblock}{Conclusión}
+El sistema diseñado es altamente eficiente, con mínimo consumo de combustible fósil gracias al reaprovechamiento del calor contenido en los gases de proceso.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Interpretación: Dimensionamiento del Sistema}
+\small
+\begin{itemize}
+  \item El caudal total de gas en circulación es de \textbf{2.27 kg/s}, que determina el tamaño de los ductos, intercambiadores y ventiladores.
+  \item El flujo de biomasa cruda alimentada es de \textbf{0.567 kg/s}, lo que implica un diseño robusto del sistema de alimentación y de descarga.
+  \item La altura del reactor debe garantizar un \textbf{tiempo de residencia suficiente} para permitir el secado, la torrefacción y el enfriamiento.
+  \item La baja velocidad del sólido asegura contacto térmico adecuado sin arrastre de partículas.
+  \item El área de sección transversal del reactor ($A_r$) y la altura total del lecho dependen de:
+  \[
+  A_r = \frac{W_f}{U_s \cdot \rho_{\text{bulk}}}, \quad L_{\text{total}} = \frac{V_{\text{total}}}{A_r}
+  \]
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Símbolos y Nomenclatura (1/4)}
+\footnotesize
+\begin{itemize}
+  \item \textbf{ASH}: fracción de ceniza en la biomasa húmeda o recibida (adimensional)
+  \item \textbf{Ar}: área de sección transversal del reactor (m\textsuperscript{2})
+  \item \textbf{Bi}: número de Biot ($hV/\lambda S$)
+  \item \textbf{Cpd}: calor específico de biomasa seca (kJ/kg°C)
+  \item \textbf{Cpw}: calor específico de biomasa húmeda (kJ/kg°C)
+  \item \textbf{Cpg}: calor específico medio del gas de combustión (kJ/kg°C)
+  \item \textbf{EV}: densidad energética por volumen (kJ/m\textsuperscript{3})
+  \item \textbf{EY}: rendimiento energético (adimensional)
+  \item \textbf{HHV}: poder calorífico superior en base masa (kJ/kg)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Símbolos y Nomenclatura (2/4)}
+\footnotesize
+\begin{itemize}
+  \item \textbf{h}: coeficiente de transferencia de calor entre biomasa y gas (kJ/kg°C)
+  \item \textbf{hu}: eficiencia de utilización del calor (adimensional)
+  \item \textbf{K}: velocidad cinética de la torrefacción (s\textsuperscript{-1})
+  \item \textbf{L}: calor latente de vaporización del agua (kJ/kg)
+  \item \textbf{LHV}: poder calorífico inferior en base masa (kJ/kg)
+  \item \textbf{MY}: rendimiento másico (adimensional)
+  \item \textbf{M}: fracción de humedad en la biomasa recibida (adimensional)
+  \item \textbf{Mf}: masa de biomasa alimentada (kg)
+  \item \textbf{Mw}: masa de agua en la biomasa (kg)
+  \item \textbf{Mash}: masa de ceniza en la biomasa (kg)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Símbolos y Nomenclatura (3/4)}
+\footnotesize
+\begin{itemize}
+  \item \textbf{Mg}: masa de gas caliente diluido por unidad de masa de aceite quemado (kg)
+  \item \textbf{Moil}: caudal másico de aceite quemado (kg/s)
+  \item \textbf{Py}: número de pirólisis (adimensional)
+  \item \textbf{Q}: contenido energético (kJ)
+  \item \textbf{Q\textsubscript{d}}: carga térmica teórica del secador (kW)
+  \item \textbf{Q\textsuperscript{0}\textsubscript{d}}: carga térmica real del secador (kW)
+  \item \textbf{Q\textsubscript{t}}: carga térmica teórica del torrefactor (kW)
+  \item \textbf{Q\textsuperscript{0}\textsubscript{t}}: carga térmica real del torrefactor (kW)
+  \item \textbf{Q\textsubscript{tl}}: pérdidas térmicas del torrefactor (kW)
+\end{itemize}
+\end{frame}
+\begin{frame}{Símbolos y Nomenclatura (4/4)}
+\footnotesize
+\begin{itemize}
+  \item \textbf{r\textsubscript{p}}: radio de partícula de biomasa (m)
+  \item \textbf{S}: área superficial externa de una partícula (m\textsuperscript{2})
+  \item \textbf{T\textsubscript{gi}}: temperatura de entrada del gas al torrefactor (°C)
+  \item \textbf{T\textsubscript{g0}}: temperatura de salida del gas (°C)
+  \item \textbf{T\textsubscript{t}}: temperatura de torrefacción (°C)
+  \item \textbf{T\textsubscript{0}}: temperatura ambiente (°C)
+  \item \textbf{U\textsubscript{g}}: velocidad espacial del gas (m/s)
+  \item \textbf{U\textsubscript{s}}: velocidad espacial de sólidos (m/s)
+  \item \textbf{V}: volumen de la partícula de biomasa (m\textsuperscript{3})
+  \item \textbf{W\textsubscript{d}}: caudal de biomasa seca (kg/s)
+  \item \textbf{W\textsubscript{f}}: caudal de biomasa húmeda (kg/s)
+  \item \textbf{W\textsubscript{g}}: flujo de gas caliente diluido al torrefactor (kg/s)
+  \item \textbf{W\textsubscript{t}}: producción de biomasa torrefactada (kg/s)
+  \item \textbf{X\textsubscript{d}}: fracción de pérdida de calor en el secador (adimensional)
+\end{itemize}
+\end{frame}
+\begin{frame}{Subíndices}
+\footnotesize
+\textbf{Subíndices:}
+\begin{itemize}
+  \item \textbf{ar}: base recibida (as-received)
+  \item \textbf{bulk}: volumen aparente
+  \item \textbf{cooler}: sección de enfriamiento
+  \item \textbf{d}: secador
+  \item \textbf{daf}: base seca y libre de ceniza
+  \item \textbf{db}: base seca
+  \item \textbf{feed}: biomasa alimentada
+  \item \textbf{pd}: sección de presecado
+  \item \textbf{pdh}: calentador de postsecado
+  \item \textbf{t}: producto torrefactado
+  \item \textbf{tor}: torrefactor
+  \item \textbf{product}: valor en el producto final
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Símbolos Griegos}
+    \textbf{Símbolos Griegos:}
+\begin{itemize}
+  \item $\rho$: densidad (kg/m\textsuperscript{3})
+  \item $\lambda$: conductividad térmica de la biomasa (kJ/°C·m)
+  \item $\eta$: eficiencia de combustión del quemador (adimensional)
+\end{itemize}
+\end{frame}
+\end{document}

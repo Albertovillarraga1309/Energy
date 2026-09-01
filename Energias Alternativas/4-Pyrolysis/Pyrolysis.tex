@@ -1,0 +1,1024 @@
+\documentclass[../../main.tex]{subfiles}
+\input{0-theme/default}
+
+\begin{document}
+
+% ==========================
+\section{Pyrolysis}
+% ==========================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Introducción}
+\begin{frame}{Introducción}
+\footnotesize
+\setlength{\parskip}{2pt}
+
+La \textbf{pirólisis} es la descomposición termoquímica de la biomasa que genera una variedad de productos útiles, ya sea en ausencia total de agentes oxidantes o con un suministro tan limitado que no permite la gasificación en forma apreciable. Además, constituye varias etapas iniciales del proceso de gasificación.
+
+Durante la pirólisis, las grandes moléculas hidrocarbonadas complejas de la biomasa se descomponen en moléculas más pequeñas y sencillas de gas, líquido y carbón.
+
+Procesos relacionados o que se solapan: \emph{craqueo, desvolatilización, carbonización, torrefacción, destilación seca, destilación destructiva y termólisis}. No se asemeja a la \textbf{gasificación}, que implica reacciones con un agente externo (medio de gasificación).
+
+\textbf{Rangos de temperatura típicos:}
+\begin{itemize}
+\item Pirólisis: 300--650~°C
+\item Gasificación: 800--1000~°C
+\item Torrefacción: 200--300~°C
+\end{itemize}
+
+El \textbf{biocarbón} es el producto sólido resultante de la pirólisis; ofrece una alternativa a la quema completa de residuos, pues puede retener carbono en el suelo durante cientos de años.
+
+\end{frame}
+
+\begin{frame}{Antecedentes Históricos}
+\begin{itemize}
+\item \textbf{Era preindustrial:} El carbón vegetal (pirólisis lenta de madera) fue esencial para extraer hierro a partir del mineral.
+\item Se utilizaban hornos tipo \emph{colmena} para producir carbón de biomasa.
+\item Cuando la madera escaseó, el carbón mineral de minas subterráneas sustituyó al carbón vegetal.
+\item \textbf{Innovación de Abraham Gesner (Halifax, 1840s):}
+\begin{itemize}
+\item Destiló trozos de carbón a \SI{427}{\celsius}, purificó con \(H_2SO_4\) y cal, y redestiló.
+\item Obtuvo un líquido claro que quemaba con llama brillante: lo llamó \textbf{queroseno}.
+\end{itemize}
+\item El queroseno sustituyó el aceite de ballena, reduciendo la flota ballenera (>730 barcos en 1846) y evitando la extinción.
+\item Fue el primer combustible líquido transportable, revolucionando la iluminación mundial.
+\end{itemize}
+\end{frame}
+\begin{frame}{Pyrolysis}
+\small
+\begin{itemize}
+  \item \textbf{Definición:} Calentamiento rápido de biomasa en ausencia de O\textsubscript{2} hasta la \emph{temperatura de pirolisis}, manteniéndola para obtener gases no condensables, carbón (\emph{char}) y un producto líquido (bio‑aceite).
+  \item El bio‑aceite es el producto de mayor interés; su naturaleza depende de la temperatura y la velocidad de calentamiento.
+  \item Productos iniciales: vapores condensables + \emph{char}. Los vapores pueden craquearse en CO, CO\textsubscript{2}, H\textsubscript{2}, CH\textsubscript{4}, más líquido y \emph{char} adicional.
+  \item Mecanismos: reacciones homogéneas en fase gas y heterogéneas gas‑sólido.
+  \item Reacción genérica:
+    \[
+      \mathrm{C_{n}H_{m}O_{p}}(biomasa)  \xrightarrow{\text{calor}} 
+      \sum\mathrm{C_{x}H_{y}O_{z}}_{\text{(líq)}} +
+     \sum \mathrm{C_{a}H_{b}O_{c}}_{\text{(gas)}} + \mathrm{H_2O} + \mathrm{C}_{\text{(char)}}
+    \]
+  \item La pyrolysis es un paso previo rápido y esencial dentro de un gasificador.
+ 
+\end{itemize}
+\end{frame}
+\begin{frame}{planta de pyrólysis}
+ \textbf{Esquema de lecho fluidizado:} Biomasa alimentada sobre sólidos calientes; vapores salen y se enfrían; el bio‑aceite condensa; los gases no condensables pueden reciclarse; el \emph{char} puede recuperarse o quemarse para generar calor.
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.55\linewidth]{Energias Alternativas/3-Biomass/img/simple_planta_pyrolysis.png}
+        \small
+        \caption{Esquema simplificado de una planta de pyrólysis.
+}
+        \label{fig:enter-label}
+    \end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Productos de la Pirólisis}
+\scriptsize
+\begin{itemize}
+  \item La pirólisis descompone grandes moléculas complejas en moléculas más pequeñas.
+  \item \textbf{Productos principales:}
+  \begin{enumerate}
+    \item \textbf{Líquido}: alquitranes, hidrocarburos pesados y agua.
+    \item \textbf{Sólido}: char (carbón sólido).
+    \item \textbf{Gas}:
+    \begin{itemize}
+      \item \textit{CO\textsubscript{2}}: dióxido de carbono
+      \item \textit{H\textsubscript{2}O}: vapor de agua
+      \item \textit{CO}: monóxido de carbono
+      \item \textit{C\textsubscript{2}H\textsubscript{2}}: acetileno
+      \item \textit{C\textsubscript{2}H\textsubscript{4}}: etileno
+      \item \textit{C\textsubscript{2}H\textsubscript{6}}: etano
+      \item \textit{C\textsubscript{6}H\textsubscript{6}}: benceno
+    \end{itemize}
+  \end{enumerate}
+  \item Las fracciones relativas dependen de la velocidad de calentamiento y la temperatura final (\SI{300}{\degreeCelsius}–\SI{650}{\degreeCelsius}).
+  \item No confundir con la \emph{materia volátil}: en el análisis próximo, líquidos y gases se agrupan como materia volátil, y el char como carbono fijo.
+  \item Normas ASTM (p. ej. \textbf{D‑3172}, \textbf{D‑3175}) definen condiciones estándar: horno a \SI{950}{\degreeCelsius} durante \textbf{7 min} para medir materia volátil.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fracción líquida de la pyrolysis}
+\begin{itemize}
+\item Fluido negro y viscoso denominado \emph{alquitrán}, \emph{bio‑oil} o \emph{biocrudo}.
+\item Contenido de agua: \SI{\approx 20}{\percent}.
+\item Compuesto principalmente por compuestos fenólicos homólogos.
+\item Poder calorífico inferior (LHV):
+\begin{itemize}
+\item Biomasa original (base seca): \SIrange{19.5}{21}{MJ,kg^{-1}}.
+\item Bio‑oil (base húmeda): \SIrange{13}{18}{MJ,kg^{-1}}.
+\end{itemize}
+\item \textbf{Formación}: despolimerización y fragmentación rápidas de celulosa, hemicelulosa y lignina, seguida de enfriamiento instantáneo (\emph{quenching}) para "congelar" los productos intermedios.
+\item \textbf{Naturaleza}: microemulsión
+\begin{itemize}
+\item Fase continua: solución acuosa de productos de celulosa y hemicelulosa + moléculas pequeñas de lignina.
+\item Fase discontinua: macromoléculas de lignina pirrolítica.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fracción líquida de la pyrolysis}
+\begin{itemize}
+     \item Peso molecular del bio‑oil condensado: $>,500$~Da.
+\item \textbf{Principales familias de compuestos} (Piskorz \emph{et al.}, 1988):
+\end{itemize}
+\begin{itemize}
+\item Hidroxi‑aldehídos
+\item Hidroxi‑cetonas
+\item Azúcares y deshidro‑azúcares
+\item Ácidos carboxílicos
+\item Compuestos fenólicos
+\end{itemize}
+\end{frame}
+
+%------------------------------
+\begin{frame}{Fracción Sólida: Biocarbón}
+\begin{itemize}
+\item Producto sólido resultante de la \textbf{pyrolysis}.
+\item Composición aproximada: \textbf{85,\% C} con trazas de O y H; mínima ceniza inorgánica.
+\item \textbf{Poder calorífico inferior (LHV)}: \SI{32}{\mega\joule\per\kilogram} (Diebold y Bridgwater, 1997), superior al de la biomasa original y al bio‑oil.
+\item Presenta una \textbf{gran área superficial porosa}, útil para adsorción y almacenamiento de carbono.
+\end{itemize}
+\end{frame}
+%----------------------------------------
+\begin{frame}{Gas en la Pyrolysis}
+\small
+\begin{itemize}
+\item \textbf{Descomposición primaria} genera:
+\begin{itemize}
+\item \textbf{Vapores condensables}: moléculas pesadas que se licuan al enfriarse y aumentan el rendimiento líquido.
+\item \textbf{Gases no condensables (primarios)}: \ce{CO2}, \ce{CO}, \ce{CH4}, \ce{C2H6}, \ce{C2H4}.
+\end{itemize}
+\item El \textit{craqueo secundario} del vapor a mayor $T$ produce \textbf{gases secundarios} adicionales.
+\item Producto final = mezcla de gases primarios + secundarios.
+\item $\text{LHV}_{\text{primario}} \approx \SI{11}{MJ.Nm^{-3}}$; tras craqueo severo, $\text{LHV}_{\text{pyrolysis}} \approx \SI{20}{MJ.Nm^{-3}}$ (\textit{Diebold \& Bridgwater}, 1997).
+\end{itemize}
+\end{frame}
+
+
+%-----------------------------------------------------------------
+\begin{frame}{Clasificación de la Pyrolysis}
+\begin{block}{Según la velocidad de calentamiento}
+\begin{itemize}
+\item \textbf{Lenta:} $t_{\text{heating}} \gg t_{r}$ – orientada a producción de char.
+\begin{itemize}
+\item \emph{Torrefacción}: \SI{200}{--,300},\si{\degreeCelsius}
+\item \emph{Carbonización}: $>,\SI{400}{\degreeCelsius}$
+\end{itemize}
+\item \textbf{Rápida:} $t_{\text{heating}} \ll t_{r}$ – orientada a bio‑oil y gas.
+\begin{itemize}
+\item \emph{Flash}: residencia $<,\SI{1}{s}$
+\item \emph{Ultrarapid}: residencia $<,\SI{0.5}{s}$
+\end{itemize}
+\end{itemize}
+\end{block}
+\vspace{0.5em}
+\begin{block}{Según el medio no oxidante}
+\begin{itemize}
+\item \emph{Hydrous}: en H\textsubscript{2}O – producción de químicos.
+\item \emph{Hydro‑}: en H\textsubscript{2} – bio‑oil.
+\item \emph{Methano‑}: en CH\textsubscript{4} – obtención de químicos.
+\end{itemize}
+\end{block}
+\end{frame}
+
+%-----------------------------------------------------------------
+\begin{frame}{Tabla – Características de procesos térmicos}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Proceso} & \textbf{Residencia} & \textbf{dT/dt} & \textbf{T final (°C)} & \textbf{Productos} \\
+\midrule
+Torrefacción   & 10--60 min & Muy baja  & 280      & Biomasa torrefactada \\
+Carbonización  & Días       & Muy baja  & $>400$   & Carbón vegetal \\
+Rápida         & $<2$ s     & Muy alta  & $\sim500$ & Bio‑oil \\
+Flash          & $<1$ s     & Alta      & $<650$   & Bio‑oil, químicos, gas \\
+Ultrarapid     & $<0.5$ s   & Muy alta  & $\sim1000$ & Químicos, gas \\
+Vacío          & 2--30 s    & Media     & 400      & Bio‑oil \\
+Hydro‑         & $<10$ s    & Alta      & $<500$   & Bio‑oil \\
+Methano‑       & $<10$ s    & Alta      & $>700$   & Químicos \\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Pirólisis Lenta y Convencional}
+\footnotesize
+\textbf{Pirólisis lenta (Carbonización):}
+\begin{itemize}
+  \item Proceso más antiguo de pirólisis, utilizado desde hace miles de años.
+  \item Objetivo principal: producción de \textbf{char} o carbón vegetal.
+  \item La biomasa se calienta lentamente en ausencia de oxígeno a $\sim\SI{400}{\degreeCelsius}$ durante un periodo prolongado (incluso días).
+  \item En hornos tipo colmena, los troncos se apilan y cubren con arcilla; se permite entrada limitada de oxígeno para combustión parcial.
+  \item El calor es generado por un pequeño fuego interno; el sistema permanece bien aislado.
+  \item El tiempo prolongado favorece la conversión de vapores condensables en char y gases no condensables.
+\end{itemize}
+
+\textbf{Pirólisis convencional:}
+\begin{itemize}
+  \item Produce \textbf{gas, líquido y char} como productos principales.
+  \item Calentamiento moderado hasta $\sim\SI{600}{\degreeCelsius}$.
+  \item Tiempo de residencia del producto: del orden de minutos.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pirólisis Rápida}
+\footnotesize
+\begin{itemize}
+  \item Objetivo principal: \textbf{maximizar la producción de bioaceite (líquido)}.
+  \item La biomasa se calienta rápidamente hasta alcanzar la temperatura pico antes de descomponerse.
+  \item \textbf{Velocidad de calentamiento:} entre \SI{1000}{\degreeCelsius\per\second} y \SI{10000}{\degreeCelsius\per\second}.
+  \item \textbf{Temperatura pico:}
+  \begin{itemize}
+    \item $\leq \SI{650}{\degreeCelsius}$ para producir bioaceite.
+    \item Hasta \SI{1000}{\degreeCelsius} si se desea producir gas.
+  \end{itemize}
+  \item Se emplean comúnmente \textbf{lechos fluidizados}.
+\end{itemize}
+
+\textbf{Factores clave que aumentan el rendimiento líquido:}
+\begin{enumerate}
+  \item Velocidad de calentamiento muy alta.
+  \item Temperatura de reacción entre \SI{425}{\degreeCelsius} y \SI{600}{\degreeCelsius}.
+  \item Tiempo de residencia del vapor en el reactor menor a \SI{3}{\second}.
+  \item Enfriamiento rápido (quenching) del gas producto.
+\end{enumerate}
+\end{frame}
+\begin{frame}{Pirólisis Flash}
+\small
+\begin{itemize}
+  \item La biomasa se calienta rápidamente en ausencia de oxígeno.
+  \item Rango de temperatura: \SI{450}{\degreeCelsius}–\SI{600}{\degreeCelsius}.
+  \item El producto (gases condensables y no condensables) abandona el pirolizador en un \textbf{tiempo de residencia corto}: \SI{30}{ms}–\SI{1500}{ms} %\cite{Bridgwater1999}.
+  \item Al enfriarse, el vapor condensable se convierte en \textbf{bioaceite (bio-oil)}.
+  \item Este proceso incrementa el rendimiento de líquido y \textbf{reduce la producción de char}.
+  \item Rendimiento típico de bioaceite: \textbf{70–75\,\%} del total de productos de la pirólisis.
+\end{itemize}
+\end{frame}
+\begin{frame}{Pirólisis Ultrarrápida}
+\small
+\begin{itemize}
+  \item Implica un \textbf{calentamiento extremadamente rápido} de la biomasa.
+  \item En un método, \textbf{sólidos portadores de calor} impactan con el vapor de biomasa, generando una tasa de calentamiento muy alta (Figura 5.7C).
+  \item El \textbf{enfriamiento rápido} del producto primario ocurre directamente dentro del reactor.
+  \item Un \textbf{separador gas-sólido} separa los sólidos calientes de los gases no condensables y vapores del producto primario.
+  \item Los sólidos se \textbf{recalientan en un combustor separado} y se transportan nuevamente al mezclador mediante un gas no oxidante.
+  \item Característica clave: \textbf{tiempo de residencia corto, uniforme y controlado}.
+  \item Temperatura de operación:
+  \begin{itemize}
+    \item \textbf{$\sim \SI{1000}{\degreeCelsius}$} para maximizar la producción de gas.
+    \item \textbf{$\sim \SI{650}{\degreeCelsius}$} para maximizar la producción de líquido.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}{Pirólisis en Presencia de un Medio}
+\footnotesize
+\begin{itemize}
+  \item \textbf{Hidropirólisis:}
+  \begin{itemize}
+    \item Descomposición térmica en atmósfera de \textbf{hidrógeno a alta presión}.
+    \item Aumenta el rendimiento de volátiles y la producción de hidrocarburos de baja masa molar.
+    \item Diferente a la hidrogasificación del char.
+    \item El hidrógeno estabiliza radicales libres antes de que se repolimericen y formen char.
+    \item Produce bioaceite con \textbf{menor contenido de oxígeno}.
+  \end{itemize}
+
+  \item \textbf{Pirólisis acuosa (hidrosa):}
+  \begin{itemize}
+    \item Craqueo térmico de biomasa en agua a alta temperatura.
+    \item Ejemplo: conversión de desechos de pavo en hidrocarburos ligeros para combustible, fertilizantes o químicos.
+    \item \textbf{Proceso en dos etapas:}
+    \begin{itemize}
+      \item Etapa 1: \SI{200}{\degreeCelsius}–\SI{300}{\degreeCelsius} bajo presión.
+      \item Etapa 2: craqueo a \SI{500}{\degreeCelsius}.
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Rendimiento de Productos de la Pirólisis}
+\footnotesize
+\begin{itemize}
+  \item El rendimiento de productos depende de:
+  \begin{itemize}
+    \item Diseño del pirolizador.
+    \item Características físicas y químicas de la biomasa.
+    \item Parámetros operativos:
+    \begin{itemize}
+      \item \textbf{Tasa de calentamiento}.
+      \item \textbf{Temperatura final} (temperatura de pirólisis).
+      \item \textbf{Tiempo de residencia} en la zona de reacción.
+    \end{itemize}
+  \end{itemize}
+  
+  \item Otros factores que afectan los rendimientos:
+  \begin{itemize}
+    \item Presión.
+    \item Composición del gas ambiente.
+    \item Presencia de catalizadores minerales.
+  \end{itemize}
+
+  \item \textbf{Efectos del calentamiento:}
+  \begin{itemize}
+    \item Calentamiento rápido → mayor cantidad de volátiles y char más reactivo.
+    \item Calentamiento lento y mayor tiempo de residencia → formación de \textbf{char secundario} por reacción entre char primario y volátiles.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Influencia de la Composición de la Biomasa}
+\small
+\begin{itemize}
+  \item La relación \textbf{H/C} de la biomasa afecta significativamente el rendimiento de la pirólisis.
+  \item Los tres principales componentes de la biomasa lignocelulósica tienen rangos distintos de descomposición térmica:
+  \begin{itemize}
+    \item \textbf{Hemicelulosa:} \SI{150}{\degreeCelsius}–\SI{350}{\degreeCelsius}
+    \item \textbf{Celulosa:} \SI{275}{\degreeCelsius}–\SI{350}{\degreeCelsius}
+    \item \textbf{Lignina:} \SI{250}{\degreeCelsius}–\SI{500}{\degreeCelsius}
+  \end{itemize}
+  \item Cada componente se piróliza de forma distinta, con contribuciones diferentes al gas, líquido y char.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pirólisis de Celulosa y Hemicelulosa}
+\small
+\textbf{Celulosa:}
+\begin{itemize}
+  \item Fuente principal de vapores condensables.
+  \item Se descompone entre \SI{300}{\degreeCelsius}–\SI{400}{\degreeCelsius}.
+  \item Sin catalizadores, produce principalmente \textbf{levoglucosano} como monómero %\cite{Diebold1997}.
+  \item A $T > \SI{500}{\degreeCelsius}$, el levoglucosano se volatiliza → más gas y aceite, poco char.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Hemicelulosa:}
+\begin{itemize}
+  \item Menos estable, se descompone entre \SI{200}{\degreeCelsius}–\SI{300}{\degreeCelsius}.
+  \item Produce más \textbf{gases no condensables} y menos alquitrán que la celulosa %\cite{Reed2002}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pirólisis de la Lignina}
+\small
+\begin{itemize}
+  \item Se descompone en un rango amplio: \SI{280}{\degreeCelsius}–\SI{500}{\degreeCelsius}.
+  \item Tasa máxima de liberación: \SI{350}{\degreeCelsius}–\SI{450}{\degreeCelsius} %\cite{Kudo1957}.
+  \item Produce más \textbf{char y compuestos aromáticos} que la celulosa %\cite{Soltes1981}.
+  \item Bajo calentamiento lento a \SI{400}{\degreeCelsius}, genera hasta \textbf{40\,\% de su peso como char} %\cite{Klass1998}.
+  \item También aporta al \textbf{rendimiento líquido} (aprox. 35\,\%): incluye componentes acuosos, alquitrán y \textbf{fenoles} (por ruptura de enlaces éter y C–C) %\cite{Mohan2006}.
+  \item Rendimiento gaseoso: solo \textbf{10\,\%} de su peso original.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Efecto de la Temperatura de Pirólisis (I)}
+\small
+\begin{itemize}
+  \item Durante la pirólisis, la biomasa se calienta desde temperatura ambiente hasta una \textbf{temperatura máxima}, conocida como \textbf{temperatura de pirólisis}.
+  \item Esta temperatura se mantiene constante hasta completar el proceso.
+  \item La temperatura de pirólisis \textbf{afecta la composición y el rendimiento} de los productos generados.
+  \item La \textbf{liberación de gases} durante la pirólisis de una biomasa varía significativamente con la temperatura:
+  \begin{itemize}
+    \item Cada gas (\ce{CO2}, \ce{CO}, \ce{H2}, \ce{CH4}) tiene un comportamiento distinto frente a cambios de temperatura.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Efecto de la Temperatura de Pirólisis (II)}
+\small
+\begin{itemize}
+  \item La \textbf{cantidad de char} producido disminuye a medida que aumenta la temperatura de pirólisis.
+  \item Ejemplo: En la pirólisis del bagazo de uva:
+  \begin{itemize}
+    \item Menor char a mayor temperatura.
+    \item \textbf{Poder calorífico del char aumenta} con la temperatura.
+    \item Esto se debe a:
+    \begin{itemize}
+      \item Aumento del \textbf{carbono fijo} (mayor poder calorífico).
+      \item Disminución del contenido de volátiles.
+    \end{itemize}
+  \end{itemize}
+  \item La producción de \textbf{gases no condensables} (\ce{CO2}, \ce{CO}, \ce{H2}, \ce{CH4}) también \textbf{aumenta con la temperatura}.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Efecto de la Tasa de Calentamiento (I)}
+\small
+\begin{itemize}
+  \item La \textbf{tasa de calentamiento} influye en el \textbf{rendimiento y composición} de los productos de la pirólisis.
+  \item Calentamiento rápido (\SI{400}{\degreeCelsius}–\SI{600}{\degreeCelsius}):
+  \begin{itemize}
+    \item Mayor producción de volátiles condensables → \textbf{más líquido}.
+  \end{itemize}
+  \item Calentamiento lento a la misma temperatura:
+  \begin{itemize}
+    \item Mayor generación de \textbf{char}.
+  \end{itemize}
+  \item Ejemplo: pirólisis de esparto: %\cite{Debdoubi2006}:
+  \begin{itemize}
+    \item Tasa de calentamiento: \SI{50}{\degreeCelsius/min} → 45 \% de líquido.
+    \item Tasa de calentamiento: \SI{250}{\degreeCelsius/min} → 68.5 \% de líquido.
+    \item Temperatura de pirólisis: \SI{550}{\degreeCelsius}.
+  \end{itemize}
+  \item El \textbf{tiempo de residencia} también afecta: tiempos largos → formación de \textbf{char secundario} (reacción entre char y volátiles).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Efecto de la Tasa de Calentamiento (II)}
+\small
+\textbf{Parámetros operativos recomendados según el producto deseado:}
+\vspace{0.3cm}
+\begin{enumerate}
+  \item[\textbf{a.}] \textbf{Maximizar char (carbonización):}
+  \begin{itemize}
+    \item Tasa de calentamiento lenta: $<$ \SI{0.01}{\degreeCelsius/s}–\SI{2.0}{\degreeCelsius/s}
+    \item Temperatura final baja.
+    \item Tiempo de residencia del gas: largo.
+  \end{itemize}
+
+  \item[\textbf{b.}] \textbf{Maximizar líquido (pirólisis rápida):}
+  \begin{itemize}
+    \item Tasa de calentamiento alta.
+    \item Temperatura final moderada: \SI{450}{\degreeCelsius}–\SI{600}{\degreeCelsius}.
+    \item Tiempo de residencia del gas: corto.
+  \end{itemize}
+
+  \item[\textbf{c.}] \textbf{Maximizar gas:}
+  \begin{itemize}
+    \item Tasa de calentamiento moderada a lenta.
+    \item Temperatura final alta: \SI{700}{\degreeCelsius}–\SI{900}{\degreeCelsius}.
+    \item Tiempo de residencia del gas: largo.
+  \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Efecto del Tamaño de Partícula}
+\small
+\begin{itemize}
+  \item El \textbf{tamaño, forma, composición y estructura física} de la biomasa afectan la pirólisis mediante su influencia en la \textbf{tasa de calentamiento}.
+  
+  \item \textbf{Partículas finas:}
+  \begin{itemize}
+    \item Ofrecen menor resistencia a la salida de gases condensables.
+    \item Los gases escapan antes de sufrir \textbf{craqueo secundario}.
+    \item Resultado: \textbf{mayor rendimiento de líquidos}.
+  \end{itemize}
+
+  \item \textbf{Partículas grandes:}
+  \begin{itemize}
+    \item Mayor resistencia al escape de productos primarios.
+    \item Favorecen el \textbf{craqueo secundario} → más char y gases.
+    \item Usadas en métodos antiguos de producción de carbón vegetal.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Cinética de la Pirólisis}
+\small
+\begin{itemize}
+  \item Estudiar la cinética de la pirólisis es clave para:
+  \begin{itemize}
+    \item El diseño ingenieril de pirolizadores o gasificadores.
+    \item Comprender cómo los procesos afectan los rendimientos y la composición de los productos.
+  \end{itemize}
+  \item Tres procesos principales determinan la velocidad de pirólisis:
+  \begin{enumerate}
+    \item Cinética química.
+    \item Transferencia de calor.
+    \item Transferencia de masa.
+  \end{enumerate}
+  \item El proceso se divide en \textbf{cuatro etapas térmicas}, con límites difusos entre ellas.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Etapas Físicas de la Pirólisis (I)}
+\small
+\textbf{1. Secado} ($\sim$\SI{100}{\degreeCelsius})
+\begin{itemize}
+  \item Se libera humedad libre y parte del agua ligada.
+  \item El calor se conduce hacia el interior de la biomasa.
+  \item En alta humedad, la lignina puede fundirse y luego solidificarse al enfriar.
+  \item Usado en el curvado con vapor de madera %\cite{Diebold1997}.
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{2. Etapa inicial} (\SI{100}{\degreeCelsius}–\SI{300}{\degreeCelsius})
+\begin{itemize}
+  \item Ocurre deshidratación exotérmica.
+  \item Se liberan \ce{H2O}, \ce{CO} y \ce{CO2}.
+  \item En esta etapa se lleva a cabo la \textbf{torrefacción}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Etapas Físicas de la Pirólisis (II)}
+\small
+\textbf{3. Etapa intermedia / Pirólisis primaria} (\SI{200}{\degreeCelsius}–\SI{600}{\degreeCelsius})
+\begin{itemize}
+  \item Se generan: \textbf{char primario}, gases condensables y no condensables.
+  \item Se producen vapores precursores del bioaceite.
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{4. Etapa final / Craqueo secundario} (\SI{300}{\degreeCelsius}–\SI{900}{\degreeCelsius})
+\begin{itemize}
+  \item Vapores condensables se craquean → más gases y \textbf{char secundario}.
+  \item Si se eliminan rápidamente → se condensan como \textbf{bioaceite o alquitrán}.
+  \item Temperaturas altas (\SI{>600}{\degreeCelsius}) favorecen producción de \ce{H2}.
+  \item La \textbf{reacción shift} aumenta aún más el \ce{H2} por encima de \SI{900}{\degreeCelsius}.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Observaciones Relevantes del Proceso de Pirólisis}
+\small
+\begin{itemize}
+  \item A \textbf{baja temperatura}: alta producción de \ce{CO2}.
+  \item \textbf{Hidrocarburos} máximos a \SI{450}{\degreeCelsius}, disminuyen > \SI{500}{\degreeCelsius} → se genera más \ce{H2}.
+  \item El \textbf{char caliente} cataliza craqueo primario y secundario.
+  \item \textbf{Remoción rápida de vapores condensables} evita craqueo → mejora el rendimiento de líquidos.
+  \item \textbf{Conductividad térmica baja} (0.05–0.1 W/m·K): en leños grandes puede haber:
+  \begin{itemize}
+    \item Combustión externa,
+    \item Mientras el interior sigue en etapa de secado.
+    \item Fenómeno visible en incendios forestales.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Resumen de Etapas de la Pirólisis}
+\small
+\begin{center}
+\begin{tikzpicture}[xscale=0.024, yscale=1, thick]
+  % Ejes
+  \draw[->] (90,0) -- (950,0) node[below] {Temperatura (\SI{500}{\celsius})};
+  \draw[->] (90,0) -- (90,4) node[left] {Proceso};
+
+  % Etapas
+  \draw[fill=blue!20]  (100,0.5) rectangle (300,1.5) node[pos=.5] {\scriptsize Secado};
+  \draw[fill=green!20] (100,1.6) rectangle (300,2.5) node[pos=.5] {\scriptsize Etapa Inicial (Torrefacción)};
+  \draw[fill=yellow!30] (200,2.6) rectangle (600,3.5) node[pos=.5] {\scriptsize Pirólisis Primaria};
+  \draw[fill=red!20]   (300,0.5) rectangle (900,1.5) node[pos=.5] {\scriptsize Craqueo Secundario};
+
+  % Líneas verticales y anotaciones
+  \foreach \x in {100,200,300,450,600,900} {
+    \draw[dashed] (\x,0) -- (\x,3.8);
+  }
+
+  % Productos por etapa
+  \node at (200,0.2) {\scriptsize H\textsubscript{2}O};
+  \node at (250,1.3) {\scriptsize CO, CO\textsubscript{2}};
+  \node at (400,3.7) {\scriptsize Bioaceite};
+  \node at (700,1.3) {\scriptsize H\textsubscript{2}, Char};
+
+\end{tikzpicture}
+\end{center}
+\smallskip
+\textbf{Nota:} Las etapas se superponen parcialmente. La remoción rápida de vapores mejora el rendimiento líquido.
+\end{frame}
+
+
+
+\begin{frame}{Aspectos Químicos de la Pirólisis}
+\small
+\begin{itemize}
+  \item La biomasa lignocelulósica tiene tres componentes principales:
+  \begin{enumerate}
+    \item Celulosa
+    \item Hemicelulosa
+    \item Lignina
+  \end{enumerate}
+  \item Cada uno presenta distintos comportamientos térmicos y químicos.
+  \item El modelo de \textbf{Broido–Shafizadeh} (1979) explica la pirólisis de la celulosa mediante:
+  \begin{itemize}
+    \item Una \textbf{reacción intermedia} (I) → celulosa activa.
+    \item Dos reacciones principales:
+      \begin{itemize}
+        \item II: \textit{Deshidratación} → char y gases (\ce{CO}, \ce{CO2}, \ce{H2O}).
+        \item III: \textit{Despolimerización} → levoglucosano, alquitranes.
+      \end{itemize}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pirólisis de la Celulosa según Broido–Shafizadeh}
+\small
+\begin{itemize}
+  \item \textbf{Reacción I:} genera un intermedio líquido —\textit{celulosa activa}— no estable, visible en pirólisis ablativa.
+  \item \textbf{Reacción II (deshidratación):}
+  \begin{itemize}
+    \item Dominante a $T<\SI{300}{\degreeCelsius}$ y calentamiento lento.
+    \item Produce \textbf{char, \ce{CO2}, \ce{CO}, \ce{H2O}}.
+  \end{itemize}
+  \item \textbf{Reacción III (despolimerización):}
+  \begin{itemize}
+    \item Dominante a altas tasas de calentamiento y $T>\SI{300}{\degreeCelsius}$.
+    \item Produce vapores, \textbf{levoglucosano}, alquitrán.
+  \end{itemize}
+  \item \textbf{Reacción IV:} craqueo secundario de vapores → \textbf{char secundario}, alquitrán y gases.
+  \item \textbf{Salida rápida del vapor} → evita craqueo → mayor rendimiento de líquidos (bioaceite).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pirólisis de Hemicelulosa y Lignina}
+\small
+\textbf{Hemicelulosa:}
+\begin{itemize}
+  \item Inicia degradación entre \SI{130}{\degreeCelsius}–\SI{194}{\degreeCelsius}, con mayor parte > \SI{180}{\degreeCelsius}.
+  \item Produce más gas y menos alquitrán y char que la celulosa.
+  \item Compuestos acuosos similares al ácido pirolenoso.
+  \item Más humedad combinada y punto de ablandamiento más bajo.
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{Lignina:}
+\begin{itemize}
+  \item Degradación inicia en \SI{280}{\degreeCelsius}, máximo entre \SI{350}{\degreeCelsius}–\SI{450}{\degreeCelsius}.
+  \item Productos: \textbf{55\% char}, 15\% alquitrán, 20\% fase acuosa, 12\% gases.
+  \item Alquitrán rico en fenoles → base para resinas ecológicas.
+  \item Difícil de deshidratar.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Constantes de Velocidad para Reacciones de Pirólisis}
+\small
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}llcc@{}}
+\toprule
+\textbf{Reacción} & \textbf{Descripción} & $A_i$ (s\textsuperscript{–1}) & $E_i$ (kJ/mol) \\ \midrule
+I & Degradación inicial (celulosa activa) & $2.83\times10^{19}$ & 243.0 \\
+II & Deshidratación (char + gases) & $1.31\times10^{10}$ & 153.0 \\
+III & Despolimerización (alquitrán) & $3.16\times10^{14}$ & 198.0 \\
+IV & Craqueo secundario (gases, char) & $4.28\times10^{6}$ & 107.5 \\
+\bottomrule
+\end{tabular}
+\caption{Constantes cinéticas del modelo de Broido–Shafizadeh. Tasa de reacción: $\frac{dm}{dt} = A_i (V_i^3 - V_i)\, e^{-E_i/RT}$}
+\end{table}
+\end{frame}
+
+
+\begin{frame}{Modelo de Broido–Shafizadeh para la Celulosa}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{Energias Alternativas/4-Pyrolysis/img/modelo_broido_shafizadeh.png}
+    \caption{Modelo de Broido–Shafizadeh}
+   % \label{fig:enter-label}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Modelos Cinéticos Globales de Pirólisis}
+\small
+\begin{itemize}
+  \item Para optimizar el proceso y maximizar los productos deseados, es necesario comprender la \textbf{cinética de la pirólisis}.
+  \item La estimación de constantes cinéticas es difícil, especialmente para \textbf{pirólisis rápida}, por su carácter no estacionario.
+  \item Se han propuesto tres modelos principales %\cite{Blasi1993}:
+  \begin{enumerate}
+    \item \textbf{Reacción global en una etapa}: una única reacción global.
+    \item \textbf{Una etapa, múltiples reacciones}: varias reacciones paralelas, útil para distribución de productos.
+    \item \textbf{Dos etapas, semiglobal}: incluye reacciones primarias y secundarias en serie.
+  \end{enumerate}
+  \item Para diseño ingenieril, el enfoque \textbf{“caja negra”} puede ser útil como primera aproximación.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Modelo Global de Reacción Única}
+\small
+\textbf{Reacción simplificada:} \texttt{Biomasa → volátiles + char} (sin considerar cenizas ni humedad)
+
+\vspace{0.2cm}
+\textbf{Ecuaciones del modelo:}
+\begin{align*}
+\frac{dm_b}{dt} &= -k(m_b - m_c) \\
+X &= \frac{m_0 - m_b}{m_0 - m_c} \\
+\frac{dX}{dt} &= -k(1 - X) \\
+X(t) &= 1 - A\,e^{-kt} \\
+k &= \frac{E}{RT}
+\end{align*}
+
+\vspace{0.2cm}
+\textbf{Notas:}
+\begin{itemize}
+  \item $m_b$: masa de biomasa sin pirolizar, $m_c$: masa final de char, $m_0$: masa inicial.
+  \item $X$: conversión fraccional.
+  \item $k$: constante de velocidad, $E$: energía de activación, $A$: factor preexponencial.
+  \item Válido especialmente para \textbf{pirólisis lenta} bajo condiciones controladas.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Constantes Cinéticas para el Modelo Global de Una Etapa}
+\small
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Combustible} & \textbf{Temperatura (K)} & $E$ (kJ/mol) & $A$ (s\textsuperscript{–1}) \\ \midrule
+Celulosa & 520–1270 & 166.4 & $3.93 \times 10^{11}$ \\
+Hemicelulosa & 520–1270 & 123.7 & $1.45 \times 10^{9}$ \\
+Lignina & 520–1270 & 141.3 & $1.23 \times 10^{8}$ \\
+Madera & 321–720 & 125.4 & $1.03 \times 10^{8}$ \\
+Cáscara de almendra & 730–880 & 95–121 & $1.83 \times 10^{6}$ \\
+Aserrín de haya & 450–700 & 84 (T < 600 K) & $2.33 \times 10^{4}$ \\
+\bottomrule
+\end{tabular}
+\caption{Constantes para pirólisis a tasa de calentamiento lenta %\cite{Lewellen1977, Min1977, Font1990, Barooah1976}.}
+\end{table}
+\end{frame}
+
+\begin{frame}{Transferencia de Calor en la Pirólisis}
+\small
+\begin{itemize}
+  \item A temperaturas moderadas (\SI{300}{\degreeCelsius}–\SI{400}{\degreeCelsius}), la transferencia de calor no limita la pirólisis.
+  \item A temperaturas mayores, \textbf{la conducción y convección internas influyen en la cinética global}.
+  \item Modos de transferencia de calor involucrados %\cite{Babu2004b}:
+  \begin{enumerate}
+    \item \textbf{Conducción} en el interior de la partícula.
+    \item \textbf{Convección} en los poros de la partícula.
+    \item \textbf{Radiación y convección} desde la superficie externa.
+  \end{enumerate}
+  \item En reactores comerciales, el calor se transfiere a través de:
+  \begin{itemize}
+    \item Pared del reactor (vacío),
+    \item Gases calientes (lecho arrastrado),
+    \item Sólidos portadores de calor (lechos fluidizados).
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tamaño de Partícula y Transferencia de Masa}
+\small
+\begin{itemize}
+  \item La baja conductividad térmica de la biomasa ($\sim$0.1 W/m·K) limita el calentamiento interno.
+  \item Partículas grandes → calentamiento lento interior → más reacciones secundarias → \textbf{menor rendimiento líquido}.
+  \item Shen et al. (2009): disminución del rendimiento de aceite con tamaños entre 0.3–1.5 mm; sin efecto apreciable al aumentar a 3.5 mm.
+  \item \textbf{Transferencia de masa:}
+  \begin{itemize}
+    \item Una corriente de gas sobre el combustible ayuda a remover rápidamente los productos.
+    \item Esto \textbf{minimiza el craqueo, repolimerización y recondensación} %\cite{Sensoz2008}.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{¿La Pirólisis es Autotérmica?}
+\small
+\begin{itemize}
+  \item \textbf{No completamente}: la energía liberada no basta para cubrir:
+  \begin{itemize}
+    \item Calentamiento del alimento y medios inertes.
+    \item Reacciones endotérmicas.
+    \item Pérdidas de calor.
+  \end{itemize}
+  \item Solución común: \textbf{combustión de gases no condensables y char} para generar calor.
+  \item \textbf{Reacciones relevantes:}
+  \begin{itemize}
+    \item II (deshidratación): exotérmica.
+    \item III (despolimerización) y IV (craqueo): endotérmicas.
+    \item Pirólisis de hemicelulosa y lignina: exotérmica.
+    \item Celulosa: endotérmica a $<\SI{400}{\degreeCelsius}$, exotérmica a mayor temperatura.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Reacciones Exotérmicas a Alta Temperatura (1000 K)}
+\small
+\begin{align*}
+\ce{CO + 3H2 &-> CH4 + H2O} & \Delta H = -226~\text{kJ/mol} \\
+\ce{CO + 2H2 &-> CH3OH} & \Delta H = -105~\text{kJ/mol} \\
+\ce{0.17C6H10O5 &-> Char + 1.85H2O} & \Delta H = -80~\text{kJ/mol} \\
+\ce{CO + H2O &-> CO2 + H2} & \Delta H = -42~\text{kJ/mol}
+\end{align*}
+
+\vspace{0.3cm}
+\begin{itemize}
+  \item A baja temperatura y corto tiempo de residencia → predominan reacciones endotérmicas ($\sim$2225 kJ/kg).
+  \item A alta temperatura → predominan reacciones secundarias exotérmicas ($\sim$20 kJ/kg).
+  \item En diseño, se puede \textbf{negligir el calor de reacción}, pero se debe considerar:
+  \begin{itemize}
+    \item Calor para calentar alimentación y gases.
+    \item Calor para evaporación de productos.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tipos de Pirolizadores y Variables Operativas}
+\small
+\begin{itemize}
+  \item La selección del tipo de pirolizador depende del producto objetivo (char, líquido o gas).
+  \item Variables que afectan el rendimiento:
+  \begin{itemize}
+    \item \textbf{Temperatura}, \textbf{tasa de calentamiento}, \textbf{tiempo de residencia del gas}.
+  \end{itemize}
+\end{itemize}
+
+\vspace{0.3cm}
+\begin{table}[h]
+\small
+\centering
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Maximizar} & $T$ & Calentamiento & Tiempo gas \\ \midrule
+Char   & Baja  & Lento & Largo \\
+Líquido & Baja ($\sim$\SI{500}{\degreeCelsius}) & Rápido & Corto \\
+Gas    & Alta  & Lento & Largo \\
+\bottomrule
+\end{tabular}
+\caption{Efecto de variables operativas en el rendimiento de productos %\cite{Bridgwater1999, Demirbas2001}.}
+\end{table}
+\end{frame}
+
+\begin{frame}{Clasificación General de Pirolizadores}
+\small
+\textbf{Según contacto gas–sólido:}
+\begin{itemize}
+  \item \textbf{Lecho fijo o móvil}
+  \item \textbf{Lecho fluidizado burbujeante (BFB)}
+  \item \textbf{Lecho fluidizado circulante (CFB)}
+  \item \textbf{Ultrarrápido}
+  \item \textbf{Cono rotatorio}
+  \item \textbf{Ablativo}
+  \item \textbf{Vacío}
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Objetivos modernos:} maximizar líquidos o gases en procesos continuos.
+\end{frame}
+
+\begin{frame}{Lecho Fijo y Lecho Fluidizado Burbujeante}
+\small
+\textbf{Lecho fijo:}
+\begin{itemize}
+  \item Operación discontinua.
+  \item Calentamiento externo o combustión limitada (ej. horno colmena).
+  \item Larga residencia → \textbf{alta producción de char}.
+  \item Puede usarse gas inerte para barrido.
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{Lecho fluidizado burbujeante (BFB):}
+\begin{itemize}
+  \item Biomasa (2–6 mm) alimentada a lecho de arena caliente.
+  \item Buen control térmico y mezcla.
+  \item \textbf{Rendimiento líquido: 70–75\,\%}.
+  \item Requiere separación de char para evitar craqueo secundario.
+  \item Fácil de escalar.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{CFB y Pirolizador Ultrarrápido}
+\small
+\textbf{CFB (Circulating Fluidized Bed):}
+\begin{itemize}
+  \item Mayor velocidad del gas, mayor capacidad.
+  \item Reflujo interno y reciclaje de sólidos.
+  \item Combustión externa del char para calentar el lecho.
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{Ultrarrápido (UWO/Ensyn):}
+\begin{itemize}
+  \item Tiempo de mezcla: 10–20 ms; residencia: 70–200 ms.
+  \item Inyección de nitrógeno o arena caliente a alta velocidad.
+  \item \textbf{Rendimiento líquido hasta 90\,\%} \cite{Hulet2005}.
+  \item Enfriamiento inmediato del vapor → minimiza craqueo.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Otros Diseños: Ablativo, Cono y Vacío}
+\small
+\textbf{Ablativo:}
+\begin{itemize}
+  \item Presión entre partícula y pared caliente (contacto directo).
+  \item \textbf{Rendimiento líquido: 80\,\%}.
+  \item No requiere gas portador.
+\end{itemize}
+
+\textbf{Cono rotatorio:}
+\begin{itemize}
+  \item Alimentación desde la base con sólidos calientes.
+  \item Excelente mezcla y calentamiento rápido (5000 K/s).
+  \item \textbf{Rendimiento líquido: 60–70\,\%}.
+  \item Diseño complejo para escalado.
+\end{itemize}
+
+\textbf{Vacío:}
+\begin{itemize}
+  \item Platos circulares apilados a distintas temperaturas.
+  \item Sin gas portador, vapor extraído al vacío.
+  \item \textbf{Rendimiento líquido: 35–50\,\%}, con alto char.
+\end{itemize}
+\end{frame}
+
+
+% Diapositiva: Diseño para producción de bioaceite
+\begin{frame}{Diseño para Producción de Bioaceite}
+\small
+\begin{itemize}
+  \item La pirólisis puede producir hasta un \textbf{70\% de bioaceite} en peso seco.
+  \item Factores clave para maximizar la producción líquida:
+  \begin{itemize}
+    \item \textbf{Alta velocidad de calentamiento}
+    \item \textbf{Temperatura intermedia óptima} (\SI{500}{\degreeCelsius})
+    \item \textbf{Tiempo de residencia corto} (0.1–2.0 s)
+  \end{itemize}
+  \item Balance térmico general:
+  \begin{equation*}
+    \text{Calor aportado} = \text{Calor requerido para pirólisis} + \text{Pérdidas}
+  \end{equation*}
+  \item Pérdidas estimadas: \textbf{10\% del calor de entrada}.
+\end{itemize}
+\end{frame}
+
+% Diapositiva: Propiedades del bioaceite
+\begin{frame}{Propiedades del Bioaceite}
+\small
+\begin{itemize}
+  \item Poder calorífico: \textbf{13–18 MJ/kg}
+  \item Composición: azúcares solubles, lignina pirolítica, agua.
+  \item Contenido de oxígeno: \textbf{hasta 50\%}
+  \item Mayor densidad (\textbf{\~1.3}) y viscosidad creciente con el tiempo.
+  \item No es miscible con diésel ni autoignitable.
+  \item Requiere \textbf{refinación o hidrocraqueo} para su uso como combustible.
+\end{itemize}
+\end{frame}
+
+% Diapositiva: Introducción al Biochar
+\begin{frame}{Producción de Biochar}
+\small
+\begin{itemize}
+  \item Producto sólido de la \textbf{pirólisis lenta a temperatura moderada} (\SI{400}{\degreeCelsius}).
+  \item Máximo rendimiento estimado: \textbf{35\% en peso}.
+  \item Reacción estequiométrica típica (Antal, 2003):
+  \begin{equation*}
+    \text{C}_6\text{H}_{10}\text{O}_5 \rightarrow 3.74\text{C} + 2.65\text{H}_2\text{O} + 1.17\text{CO}_2 + 1.08\text{CH}_4
+  \end{equation*}
+\end{itemize}
+\end{frame}
+
+% Diapositiva: Beneficios del Biochar (1)
+\begin{frame}{Beneficios del Biochar (1)}
+\small
+\begin{itemize}
+  \item \textbf{Captura de carbono} y reducción de gases de efecto invernadero.
+  \item Emisiones de carbono negativas.
+  \item Sustitución de combustibles fósiles.
+  \item Reducción de pérdida de nutrientes en suelos.
+  \item Aumento de la productividad de suelos marginales.
+  \item Mejora la retención de agua y estructura del suelo.
+\end{itemize}
+\end{frame}
+
+% Diapositiva: Beneficios del Biochar (2)
+\begin{frame}{Beneficios del Biochar (2)}
+\small
+\begin{itemize}
+  \item Aumenta la \textbf{capacidad de intercambio catiónico (CEC)}.
+  \item Mejora la calidad del agua reduciendo escorrentías contaminadas.
+  \item Contribuye a la remediación de suelos y desertificación.
+  \item Alternativa al "tumba y quema" de residuos agrícolas.
+  \item Disminuye emisiones de \textbf{N$_2$O y CH$_4$} del suelo.
+  \item Genera compensaciones de carbono y mayor rentabilidad agrícola.
+\end{itemize}
+\end{frame}
+
+% Diapositiva: Propiedades del Biochar
+\begin{frame}{Propiedades del Biochar}
+\small
+\begin{itemize}
+  \item Superficie específica (área BET).
+  \item pH del carbón.
+  \item Capacidad de intercambio catiónico (CEC).
+  \item Rendimiento de carbono en el biochar.
+  \item Estas propiedades dependen de:
+  \begin{itemize}
+    \item \textbf{Temperatura de pirólisis}
+    \item \textbf{Tipo de biomasa}
+    \item \textbf{Tiempo de residencia}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Símbolos y Nomenclatura}
+\small
+\begin{tabular}{ll}
+\textbf{Símbolo} & \textbf{Descripción} \\
+\midrule
+$A$ & Factor preexponencial (s\textsuperscript{–1}) \\
+$E$ & Energía de activación (J/mol) \\
+$k$ & Constante de velocidad de reacción (s\textsuperscript{–1}) \\
+$m_b$ & Masa de biomasa en el tiempo $t$ (kg) \\
+$m_c$ & Masa del residuo de char (kg) \\
+$m_0$ & Masa inicial de la biomasa (kg) \\
+$R$ & Constante universal de los gases (J/mol\,K) \\
+$T$ & Temperatura (K) \\
+$T_\text{pyr}$ & Temperatura de pirólisis (K) \\
+$t$ & Tiempo (s) \\
+$t_\text{heating}$ & Tiempo de calentamiento (s) \\
+$t_r$ & Tiempo característico de reacción (s) \\
+$X$ & Cambio fraccional en la masa de biomasa \\
+\end{tabular}
+\end{frame}
+
+
+\end{document}

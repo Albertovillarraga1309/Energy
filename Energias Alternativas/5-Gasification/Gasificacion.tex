@@ -1,0 +1,687 @@
+\documentclass[../../main.tex]{subfiles}
+\input{0-theme/default}
+
+\begin{document}
+
+% ==========================
+\section{Gasificación}
+% ==========================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Introducción}
+\begin{frame}{Introducción}
+
+
+\begin{itemize}
+  \item El diseño y operación de un gasificador requiere comprender:
+  \begin{itemize}
+    \item El proceso de gasificación.
+    \item Configuración, tamaño y tipo de materia prima.
+    \item Parámetros operativos y su impacto en el rendimiento.
+  \end{itemize}
+
+  \item Conocer las reacciones básicas es esencial para:
+  \begin{itemize}
+    \item Planificación, diseño y operación del sistema.
+    \item Diagnóstico de fallas y mejora del proceso.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Gasificación: Reacciones y Etapas}
+\small
+\begin{itemize}
+  \item La \textbf{gasificación} convierte materiales sólidos o líquidos en:
+  \begin{itemize}
+    \item Combustibles gaseosos útiles.
+    \item Materias primas químicas para productos con valor agregado.
+  \end{itemize}
+  \item \textbf{Comparación con la combustión:}
+  \begin{itemize}
+    \item Ambos son procesos termoquímicos.
+    \item \textbf{Gasificación:} almacena energía en los enlaces químicos del gas producto.
+    \item \textbf{Combustión:} rompe enlaces para liberar energía.
+  \end{itemize}
+  \item La gasificación transforma la materia prima hidrocarbonada:
+  \begin{itemize}
+    \item Añade hidrógeno.
+    \item Elimina carbono.
+    \item Resultado: gases con alta relación H/C.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}{Etapas de la Gasificación de Biomasa}
+\small
+Un proceso típico de gasificación de biomasa incluye las siguientes etapas:
+
+\vspace{0.5em}
+\begin{enumerate}
+  \item \textbf{Secado:} eliminación de humedad del material de alimentación.
+  \item \textbf{Pirolisis:} descomposición térmica sin oxígeno.
+  \item \textbf{Combustión parcial:} oxidación limitada de gases, vapores y char para generar calor.
+  \item \textbf{Gasificación:} conversión de productos descompuestos en gases útiles.
+\end{enumerate}
+
+\vspace{0.5em}
+\textbf{Resultado:} se obtiene una mezcla de gases combustibles como CO, H\textsubscript{2}, CH\textsubscript{4} y trazas de otros componentes.
+\end{frame}
+
+\begin{frame}{Gasificación vs Pirolisis y Torrefacción}
+\footnotesize
+\textbf{Pirolisis:}
+\begin{itemize}
+  \item Proceso de descomposición térmica.
+  \item Se realiza en \textbf{ausencia de cualquier medio gasificante}.
+  \item Genera char, líquidos y gases, dependiendo de la velocidad de calentamiento.
+\end{itemize}
+\textbf{Torrefacción:}
+\begin{itemize}
+  \item Tratamiento térmico suave de biomasa.
+  \item En atmósfera inerte o con poco oxígeno.
+  \item Produce un sólido mejorado (biocarbón) con mayor estabilidad y energía específica.
+\end{itemize}
+\textbf{Gasificación:}
+\begin{itemize}
+  \item Requiere un \textbf{medio gasificante}: vapor, aire u oxígeno.
+  \item Reorganiza la estructura molecular para producir \textbf{gases o líquidos}.
+  \item También puede \textbf{añadir hidrógeno} al producto final.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Medio Gasificante: Oxígeno}
+\small
+\begin{itemize}
+  \item El \textbf{oxígeno} es un agente gasificante común, utilizado principalmente en:
+  \begin{itemize}
+    \item Combustión.
+    \item Gasificación parcial.
+  \end{itemize}
+  \item Puede suministrarse en forma pura o mediante aire.
+  \item En el diagrama ternario (C–H–O), la conversión se dirige hacia la \textbf{esquina del oxígeno}.
+  \begin{itemize}
+    \item Baja cantidad de oxígeno: se forma principalmente CO.
+    \item Alta cantidad de oxígeno: se forma CO\textsubscript{2}.
+    \item Exceso de oxígeno: el proceso se convierte en \textbf{combustión}, produciendo \textbf{gas de escape} (sin poder calorífico).
+  \end{itemize}
+  \item Mayor formación de compuestos carbonados (CO, CO\textsubscript{2}) y menor contenido de hidrógeno.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Medio Gasificante: Vapor de Agua (Steam)}
+
+\begin{itemize}
+  \item El \textbf{vapor de agua} como agente gasificante dirige la conversión hacia la \textbf{esquina del hidrógeno} en el diagrama ternario.
+  \item Resultado: mayor proporción de hidrógeno en el gas producto.
+  \item El gas generado tiene una \textbf{alta relación H/C}, ideal para procesos que requieren mayor contenido de H\textsubscript{2}.
+  \item Su poder calorífico es \textbf{intermedio}, mayor que el generado con aire pero menor que el obtenido con oxígeno puro.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Medio Gasificante: Aire}
+%\small
+\begin{itemize}
+  \item El \textbf{aire} es el agente gasificante más económico y disponible.
+  \item Contiene una gran proporción de \textbf{nitrógeno (N\textsubscript{2})}, que:
+  \begin{itemize}
+    \item No participa en las reacciones principales.
+    \item Diluye el gas producto.
+  \end{itemize}
+  \item Como resultado:
+  \begin{itemize}
+    \item Se reduce el \textbf{poder calorífico} del gas obtenido.
+    \item El gas contiene mayor volumen, pero menor energía por unidad.
+    \item \textbf{Oxígeno} produce el gas con mayor poder calorífico.
+    \item Le sigue el \textbf{vapor}.
+    \item El \textbf{aire} genera el gas con menor poder calorífico.
+      \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Proceso de Gasificación}
+\small
+Un proceso típico de gasificación sigue la siguiente secuencia:
+
+\vspace{0.5em}
+\begin{enumerate}
+  \item \textbf{Precalentamiento y secado} de la biomasa.
+  \item \textbf{Pirolisis} y/o combustión parcial.
+  \item \textbf{Gasificación del char} (reacciones de gas-sólido).
+\end{enumerate}
+
+\vspace{0.5em}
+\textbf{Nota:} Aunque a menudo se modelan en serie, estas etapas no tienen límites definidos y suelen solaparse.
+
+\vspace{0.5em}
+La energía térmica para estas transformaciones proviene de reacciones exotérmicas de combustión parcial dentro del gasificador.
+\end{frame}
+
+\begin{frame}{Productos de Pirolisis y Reacciones Subsiguientes}
+\small
+\textbf{Durante la pirolisis:}
+\begin{itemize}
+  \item \textbf{Gases:} CO, H\textsubscript{2}, CH\textsubscript{4}, H\textsubscript{2}O.
+  \item \textbf{Líquidos:} alquitrán, aceite, nafta.
+  \item \textbf{Compuestos oxigenados:} fenoles, ácidos.
+  \item \textbf{Sólido:} char.
+\end{itemize}
+
+\textbf{Reacciones posteriores:}
+\begin{itemize}
+  \item \textbf{Char:} participa en reacciones de gasificación, combustión y desplazamiento (shift).
+  \item \textbf{Gases:} sufren craqueo, reforma, combustión parcial y reacción de desplazamiento de agua-gas.
+\end{itemize}
+
+\vspace{0.5em}
+Estas interacciones generan el \textbf{gas de síntesis final:} CO, H\textsubscript{2}, CH\textsubscript{4}, CO\textsubscript{2}, H\textsubscript{2}O y otros.
+\end{frame}
+
+\begin{frame}{Poder Calorífico del Gas Producto}
+\small
+\textbf{Tabla – Valores caloríficos según el medio gasificante:}
+
+\vspace{0.5em}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Medio Gasificante} & \textbf{Poder Calorífico (MJ/Nm\textsuperscript{3})} \\
+\hline
+Aire & 4–7 \\
+Vapor de agua & 10–18 \\
+Oxígeno & 12–28 \\
+\hline
+\end{tabular}
+
+\vspace{1em}
+\textbf{Observaciones:}
+\begin{itemize}
+  \item El \textbf{oxígeno} produce el gas con mayor poder calorífico.
+  \item El \textbf{vapor} genera un gas intermedio.
+  \item El \textbf{aire} produce el gas con menor energía debido a la dilución con nitrógeno.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Secuencia de Reacciones en la Gasificación}
+\small
+\textbf{Esquema de rutas potenciales:}
+
+\vspace{0.5em}
+\textbf{1. Secado:} eliminación de humedad de la biomasa.
+
+\textbf{2. Pirolisis:} 
+\begin{itemize}
+  \item Gases: CO, H\textsubscript{2}, CH\textsubscript{4}, H\textsubscript{2}O.
+  \item Líquidos: alquitrán, aceites, nafta.
+  \item Sólido: char (carbón fijo).
+  \item Compuestos oxigenados: fenoles, ácidos.
+\end{itemize}
+
+\textbf{3. Reacciones del char:}
+\begin{itemize}
+  \item Gasificación.
+  \item Combustión parcial.
+  \item Reacción de desplazamiento.
+\end{itemize}
+
+\textbf{4. Reacciones en fase gaseosa:}
+\begin{itemize}
+  \item Craqueo, reforma, combustión parcial, desplazamiento.
+  \item Productos: CO, H\textsubscript{2}, CH\textsubscript{4}, CO\textsubscript{2}, H\textsubscript{2}O, residuos de C no convertido.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Esquema del Proceso de Gasificación}
+\tiny
+\begin{center}
+\begin{tikzpicture}[node distance=1cm, every node/.style={align=center}, >=stealth, thick]
+
+% Etapas principales
+\node[rectangle, draw, fill=blue!10] (drying) {Secado\\(Biomasa)};
+\node[rectangle, draw, fill=orange!10, below=of drying] (pyrolysis) {Pirolisis\\Gases, Líquidos, Char};
+\node[rectangle, draw, fill=green!10, below left=of pyrolysis, xshift=-0cm] (char) {Reacciones del Char\\Gasificación, Combustión, Shift};
+\node[rectangle, draw, fill=yellow!20, below right=of pyrolysis, xshift=0cm] (gas) {Reacciones en Fase Gaseosa\\Craqueo, Reforma, Combustión, Shift};
+
+% Conexiones
+\draw[->] (drying) -- (pyrolysis);
+\draw[->] (pyrolysis) -- (char);
+\draw[->] (pyrolysis) -- (gas);
+\draw[->, dashed] (char) -- (gas);
+
+% Productos finales
+\node[rectangle, draw, fill=cyan!15, below=of gas, yshift=-0.5cm] (products) {Productos Finales:\\CO, H\textsubscript{2}, CH\textsubscript{4}, CO\textsubscript{2}, H\textsubscript{2}O, \\Carbono no convertido};
+
+\draw[->] (gas) -- (products);
+\draw[->, dashed] (char) -- (products);
+
+% Etiquetas de medios
+\node[above left=0.2cm and 1.2cm of char] (label1) {\footnotesize\textbf{Medio gasificante:} \\O\textsubscript{2}, H\textsubscript{2}O, Aire};
+\draw[->, dotted] (label1) -- (char);
+
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}{Etapa de Secado en la Gasificación}
+\small
+\begin{itemize}
+  \item La biomasa recién cortada puede contener entre \textbf{30\% y 60\%} de humedad. Algunas superan el \textbf{90\%}.
+  \item Cada kg de humedad consume \textbf{≈ 2242 kJ} de energía en su evaporación — energía que no se recupera.
+  \item La alta humedad reduce la eficiencia energética del gasificador.
+  \item Se recomienda predesechar la humedad externa antes de alimentar la biomasa.
+  \item Para un gas con buen poder calorífico, se prefiere biomasa con \textbf{10–20\%} de humedad.
+  \item El secado final ocurre dentro del gasificador, donde:
+  \begin{itemize}
+    \item El calor de la zona caliente evapora la humedad remanente.
+    \item El agua libre se elimina a temperaturas \textbf{> 100°C}.
+    \item Compuestos volátiles ligeros comienzan a salir a partir de \textbf{≈ 200°C}.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Reacciones Típicas en la Gasificación (25°C)}
+\scriptsize
+\textbf{Reacciones del Carbono:}
+\begin{itemize}
+  \item R1 (Boudouard): C + CO\textsubscript{2} $\rightarrow$ 2CO \hfill $\Delta H = +172$ kJ/mol
+  \item R2 (agua-gas): C + H\textsubscript{2}O $\rightarrow$ CO + H\textsubscript{2} \hfill $\Delta H = +131$ kJ/mol
+  \item R3 (hidrogasificación): C + 2H\textsubscript{2} $\rightarrow$ CH\textsubscript{4} \hfill $\Delta H = –74.8$ kJ/mol
+  \item R4: C + 0.5O\textsubscript{2} $\rightarrow$ CO \hfill $\Delta H = –111$ kJ/mol
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Reacciones de Oxidación:}
+\begin{itemize}
+  \item R5: C + O\textsubscript{2} $\rightarrow$ CO\textsubscript{2} \hfill $\Delta H = –394$ kJ/mol
+  \item R6: CO + 0.5O\textsubscript{2} $\rightarrow$ CO\textsubscript{2} \hfill $\Delta H = –284$ kJ/mol
+  \item R7: CH\textsubscript{4} + 2O\textsubscript{2} $\rightarrow$ 2CO\textsubscript{2} + 2H\textsubscript{2}O \hfill $\Delta H = –803$ kJ/mol
+  \item R8: H\textsubscript{2} + 0.5O\textsubscript{2} $\rightarrow$ H\textsubscript{2}O \hfill $\Delta H = –242$ kJ/mol
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Otras Reacciones en Gasificación (25°C)}
+\scriptsize
+\textbf{Reacción de Desplazamiento (Shift):}
+\begin{itemize}
+  \item R9: CO + H\textsubscript{2}O $\rightarrow$ CO\textsubscript{2} + H\textsubscript{2} \hfill $\Delta H = –41.2$ kJ/mol
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Reacciones de Metanación:}
+\begin{itemize}
+  \item R10: 2CO + 2H\textsubscript{2} $\rightarrow$ CH\textsubscript{4} + CO\textsubscript{2} \hfill $\Delta H = –247$ kJ/mol
+  \item R11: CO + 3H\textsubscript{2} $\rightarrow$ CH\textsubscript{4} + H\textsubscript{2}O \hfill $\Delta H = –206$ kJ/mol
+  \item R14: CO\textsubscript{2} + 4H\textsubscript{2} $\rightarrow$ CH\textsubscript{4} + 2H\textsubscript{2}O \hfill $\Delta H = –165$ kJ/mol
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Reformado con Vapor:}
+\begin{itemize}
+  \item R12: CH\textsubscript{4} + H\textsubscript{2}O $\rightarrow$ CO + 3H\textsubscript{2} \hfill $\Delta H = +206$ kJ/mol
+  \item R13: CH\textsubscript{4} + 0.5O\textsubscript{2} $\rightarrow$ CO + 2H\textsubscript{2} \hfill $\Delta H = –36$ kJ/mol
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fundamentos de la Pirolisis}
+\small
+\begin{itemize}
+  \item La \textbf{pirolisis} no requiere un agente externo (sin aire, oxígeno o vapor).
+  \item Involucra la descomposición térmica de biomasa:
+  \begin{itemize}
+    \item Moléculas hidrocarbonadas grandes → moléculas pequeñas.
+    \item Genera gases condensables y no condensables, líquidos y char.
+     \item \textbf{Pirolisis lenta / torrefacción}: se aproxima a la esquina del carbono → más char.
+    \item \textbf{Pirolisis rápida}: se mueve hacia el eje C–H → más hidrocarburos líquidos.
+  \end{itemize}
+  \item Es una etapa previa común antes de la gasificación.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Alquitrán en la Pirolisis}
+\small
+\begin{itemize}
+  \item Uno de los productos principales de la pirolisis es el \textbf{alquitrán} (tar).
+  \item Se forma por \textbf{condensación de los vapores condensables} generados.
+  \item El alquitrán es un líquido pegajoso que:
+  \begin{itemize}
+    \item Genera serios problemas en aplicaciones industriales del gas de síntesis.
+    \item Obstruye tuberías, filtros, intercambiadores y sistemas de limpieza.
+  \end{itemize}
+  \item existen métodos de:
+  \begin{itemize}
+    \item \textbf{Craqueo} del alquitrán: romper moléculas grandes en gases útiles.
+    \item \textbf{Reformado}: conversión catalítica en gases no condensables como CO y H\textsubscript{2}.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Char y su Importancia en la Gasificación}
+\small
+\begin{itemize}
+  \item La gasificación implica reacciones químicas entre hidrocarburos del combustible, vapor, CO\textsubscript{2}, O\textsubscript{2} y H\textsubscript{2}.
+  \item El \textbf{char de biomasa}, generado en la pirolisis, no es carbono puro:
+  \begin{itemize}
+    \item Contiene compuestos hidrocarbonados con H y O.
+  \end{itemize}
+  \item Comparado con el coque de carbón:
+  \begin{itemize}
+    \item Mayor porosidad: \textbf{40–50\%} (vs. 2–18\% del carbón).
+    \item Poros más grandes: \textbf{20–30 μm} (vs. ≈0.5 Å del carbón).
+  \end{itemize}
+  \item Es más reactivo que el char de carbón, lignito o turba.
+  \item Su reactividad \textbf{aumenta con la conversión}, debido a la acción catalítica de metales alcalinos presentes.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Reacciones del Char con Agentes Gasificantes}
+\small
+\textbf{Principales reacciones del char con agentes gasificantes:}
+\vspace{0.5em}
+\begin{itemize}
+  \item (7.1) Char + O\textsubscript{2} $\rightarrow$ CO\textsubscript{2} y CO
+  \item (7.2) Char + CO\textsubscript{2} $\rightarrow$ CO
+  \item (7.3) Char + H\textsubscript{2}O $\rightarrow$ CH\textsubscript{4} y CO
+  \item (7.4) Char + H\textsubscript{2} $\rightarrow$ CH\textsubscript{4}
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Productos:} gases de bajo peso molecular como CO, H\textsubscript{2} y CH\textsubscript{4}
+
+\vspace{0.5em}
+\textbf{Nombres comunes:}
+\begin{itemize}
+  \item Reacción de Boudouard, gas-agua, hidrogasificación, etc. (ver Tabla 7.2).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Naturaleza Térmica de las Reacciones del Char}
+\small
+\begin{itemize}
+  \item Las reacciones de gasificación del char pueden ser:
+  \begin{itemize}
+    \item \textbf{Endotérmicas:} absorben calor.
+    \item \textbf{Exotérmicas:} liberan calor.
+  \end{itemize}
+
+  \item \textbf{Reacciones endotérmicas:}
+  \begin{itemize}
+    \item R1: C + CO\textsubscript{2} $\rightarrow$ 2CO \hfill ($\Delta H$ = +172 kJ/mol)
+    \item R2: C + H\textsubscript{2}O $\rightarrow$ CO + H\textsubscript{2} \hfill ($\Delta H$ = +131 kJ/mol)
+  \end{itemize}
+
+  \item \textbf{Reacciones exotérmicas:}
+  \begin{itemize}
+    \item R3: C + 2H\textsubscript{2} $\rightarrow$ CH\textsubscript{4} \hfill ($\Delta H$ = –74.8 kJ/mol)
+    \item R4: C + 0.5O\textsubscript{2} $\rightarrow$ CO \hfill ($\Delta H$ = –111 kJ/mol)
+    \item R5: C + O\textsubscript{2} $\rightarrow$ CO\textsubscript{2} \hfill ($\Delta H$ = –394 kJ/mol)
+  \end{itemize}
+
+  \item Los valores de entalpía están referidos a \textbf{25°C}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Velocidad de las Reacciones del Char}
+\small
+\begin{itemize}
+  \item Las reacciones químicas del char (C) tienen velocidades finitas y dependen de:
+  \begin{itemize}
+    \item La \textbf{reactividad del char}.
+    \item El \textbf{potencial del medio gasificante}.
+  \end{itemize}
+
+  \item \textbf{Velocidades relativas} de reacciones a 800°C (Walker et al., 1959):
+  \begin{itemize}
+    \item C + 0.5O\textsubscript{2} $\rightarrow$ CO \hfill $\sim 10^5$ (más rápida)
+    \item C + H\textsubscript{2}O $\rightarrow$ CO + H\textsubscript{2} \hfill $\sim 10^3$
+    \item C + CO\textsubscript{2} $\rightarrow$ 2CO \hfill $\sim 10^1$
+    \item C + 2H\textsubscript{2} $\rightarrow$ CH\textsubscript{4} \hfill $\sim 3 \times 10^{-3}$ (más lenta)
+  \end{itemize}
+
+  \item Relación general:
+  \[
+  R_{C+O_2} \gg R_{C+H_2O} \gg R_{C+CO_2} \gg R_{C+H_2}
+  \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Comparación de Reacciones del Char con Diferentes Agentes}
+\small
+\textbf{Orden de reactividad de agentes gasificantes:}
+\[
+\text{Oxígeno} > \text{Vapor de agua} > \text{Dióxido de carbono} > \text{Hidrógeno}
+\]
+
+\vspace{0.5em}
+\textbf{Productos formados según el medio:}
+\begin{itemize}
+  \item \textbf{Oxígeno (O\textsubscript{2})} $\rightarrow$ CO (rápida, exotérmica)
+  \item \textbf{Vapor (H\textsubscript{2}O)} $\rightarrow$ CO + H\textsubscript{2} (reacción gas-agua)
+  \item \textbf{CO\textsubscript{2}} $\rightarrow$ 2CO (reacción de Boudouard)
+  \item \textbf{Hidrógeno (H\textsubscript{2})} $\rightarrow$ CH\textsubscript{4} (hidrogasificación, muy lenta)
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Notas:}
+\begin{itemize}
+  \item La reacción con vapor puede también generar CH\textsubscript{4} y CO\textsubscript{2} bajo ciertas condiciones.
+  \item La reacción con O\textsubscript{2} es tan rápida que consume el oxígeno antes de que participen otras reacciones.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Reacción de Boudouard}
+\small
+\begin{itemize}
+  \item Es la gasificación del char (C) con dióxido de carbono:
+  \[
+  \text{C} + \text{CO}_2 \rightarrow 2\text{CO} \quad \text{(Reacción R1)}
+  \]
+  \item Reacción endotérmica (+172 kJ/mol).
+  \item Relevante en procesos de gasificación donde el CO\textsubscript{2} actúa como agente gasificante.
+  \item Velocidad de reacción \textbf{muy baja por debajo de 1000 K}.
+  \item Importancia:
+  \begin{itemize}
+    \item Contribuye a la generación de CO.
+    \item Influyente en la composición del gas de síntesis.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mecanismo de la Reacción de Boudouard}
+\small
+\textbf{Según Blasi (2009), la reacción se desarrolla en tres pasos:}
+
+\vspace{0.5em}
+\begin{enumerate}
+  \item \textbf{Paso 1:} Activación del sitio libre de carbono (C\textsubscript{fas}):
+  \[
+  \text{C}_{\text{fas}} + \text{CO}_2 \xrightarrow{k_{b1}} \text{C(O)} + \text{CO}
+  \]
+  \item \textbf{Paso 2:} Reversibilidad – recombinación con CO:
+  \[
+  \text{C(O)} + \text{CO} \xrightarrow{k_{b2}} \text{C}_{\text{fas}} + \text{CO}_2
+  \]
+  \item \textbf{Paso 3:} Descomposición del complejo C–O:
+  \[
+  \text{C(O)} \xrightarrow{k_{b3}} \text{CO}
+  \]
+\end{enumerate}
+
+\vspace{0.5em}
+\textbf{Notas:}
+\begin{itemize}
+  \item El complejo superficial C(O) es intermedio clave.
+  \item La reacción puede avanzar o revertirse según las condiciones.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Reacción Gas–Agua (Water–Gas)}
+\small
+\begin{itemize}
+  \item Es una de las reacciones más importantes de la gasificación del char.
+  \[
+  \text{C} + \text{H}_2\text{O} \rightarrow \text{CO} + \text{H}_2 \quad \text{(R2)}
+  \]
+  \item Reacción endotérmica: $\Delta H = +131$ kJ/mol.
+  \item Produce monóxido de carbono y gas hidrógeno.
+  \item Es más rápida que la reacción de Boudouard, pero más lenta que la reacción con oxígeno.
+  \item Clave para procesos que buscan maximizar la producción de H\textsubscript{2}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mecanismo de la Reacción Gas–Agua (Blasi, 2009)}
+\small
+\textbf{Etapas del mecanismo sobre un sitio activo libre de carbono (C\textsubscript{fas}):}
+
+\vspace{0.5em}
+\begin{enumerate}
+  \item \textbf{Paso 1:} Disociación del H\textsubscript{2}O:
+  \[
+  \text{C}_{\text{fas}} + \text{H}_2\text{O} \xrightarrow{k_{w1}} \text{C(O)} + \text{H}_2
+  \]
+  \item \textbf{Paso 2 (reversible):} Recombinación de C(O) con H\textsubscript{2}:
+  \[
+  \text{C(O)} + \text{H}_2 \xrightarrow{k_{w2}} \text{C}_{\text{fas}} + \text{H}_2\text{O}
+  \]
+  \item \textbf{Paso 3:} Formación de monóxido de carbono:
+  \[
+  \text{C(O)} \xrightarrow{k_{w3}} \text{CO}
+  \]
+\end{enumerate}
+
+\vspace{0.5em}
+\textbf{Producto global:} CO + H\textsubscript{2}
+\end{frame}
+
+\begin{frame}{Efecto Inhibidor del Hidrógeno}
+\small
+\begin{itemize}
+  \item Algunos modelos (Blasi, 2009) consideran la formación de complejos inhibidores:
+  \begin{align*}
+  \text{C}_{\text{fas}} + \text{H}_2 &\rightarrow \text{C(H)}_2 \quad \text{(7.14)} \\
+  \text{C}_{\text{fas}} + 0.5\text{H}_2 &\rightarrow \text{C(H)} \quad \text{(7.15)}
+  \end{align*}
+
+  \item Estos complejos \textbf{bloquean los sitios activos}, reduciendo la velocidad de gasificación.
+
+  \item Ejemplo (Barrio et al., 2001):
+  \begin{itemize}
+    \item Una atmósfera con \textbf{30\% de H\textsubscript{2}} puede reducir la velocidad de gasificación hasta \textbf{15 veces}.
+  \end{itemize}
+
+  \item \textbf{Estrategia para acelerar la reacción:}
+  \begin{itemize}
+    \item Eliminar continuamente el H\textsubscript{2} del sitio de reacción.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Reacción Shift (Water–Gas Shift)}
+\small
+\begin{itemize}
+  \item Es una reacción en fase gaseosa entre productos intermedios:
+  \[
+  \text{CO} + \text{H}_2\text{O} \rightarrow \text{CO}_2 + \text{H}_2 \quad (\Delta H = -41.2\ \text{kJ/mol})
+  \]
+  \item Aumenta el contenido de \textbf{hidrógeno} a costa del monóxido de carbono.
+  \item También llamada “reacción water–gas shift”, distinta de la reacción gas–agua (R2).
+  \item Clave en la etapa posterior del gasificador para producir gas de síntesis (syngas) con proporción H\textsubscript{2}/CO adecuada.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Equilibrio y Condiciones Operativas de la Reacción Shift}
+\small
+\begin{itemize}
+  \item Reacción \textbf{ligeramente exotérmica}:
+  \[
+  \text{Mayor temperatura} \Rightarrow \text{menor rendimiento de H\textsubscript{2}}, pero \text{mayor velocidad}.
+  \]
+  \item \textbf{No sensible a la presión.}
+  \item A \textbf{T > 1000°C}, alcanza el equilibrio rápidamente.
+  \item A \textbf{T baja (180–270°C)}, necesita catalizadores heterogéneos:
+  \begin{itemize}
+    \item Óxidos de cobre–zinc–aluminio.
+    \item Óxidos de hierro promocionados con cromo.
+  \end{itemize}
+  \item Catalizadores comerciales:
+  \begin{itemize}
+    \item Cu a 300–510°C.
+    \item Cu/Zn/Al\textsubscript{2}O\textsubscript{3} a 180–270°C.
+  \end{itemize}
+  \item \textbf{Óptimo de rendimiento:} alrededor de \textbf{225°C}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Reacción de Hidrogasificación (R3)}
+\small
+\begin{itemize}
+  \item Se lleva a cabo en presencia de hidrógeno:
+  \[
+  \text{C} + 2\text{H}_2 \rightarrow \text{CH}_4
+  \]
+  \item Reacción muy lenta comparada con otras.
+  \item Relevante solo cuando se busca producir \textbf{gas natural sintético}.
+  \item No tiene gran impacto en la gasificación general convencional.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Reacciones de Combustión del Char}
+\small
+\begin{itemize}
+  \item La mayoría de las reacciones de gasificación son \textbf{endotérmicas}.
+  \item Se permite una cantidad controlada de \textbf{combustión exotérmica} para:
+  \begin{itemize}
+    \item Suministrar calor para: secado, pirolisis y reacciones endotérmicas.
+  \end{itemize}
+  \item Principales reacciones de combustión del char:
+  \begin{align*}
+  \text{R5: } & \text{C + O}_2 \rightarrow \text{CO}_2 \quad \Delta H = -394\ \text{kJ/mol} \\
+  \text{R4: } & \text{C + 0.5 O}_2 \rightarrow \text{CO} \quad \Delta H = -111\ \text{kJ/mol}
+  \end{align*}
+  \item R5 entrega más calor, pero R4 produce CO como gas útil.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Coeficiente de Partición y Velocidades}
+\small
+\textbf{Reacciones R4 y R5 pueden ocurrir simultáneamente.}
+
+\begin{itemize}
+  \item El \textbf{coeficiente de partición} $\beta$ indica cómo se reparte el oxígeno:
+  \[
+  \beta \in [1, 2], \quad \text{depende de la temperatura (T)}
+  \]
+  \item Forma combinada de las reacciones:
+  \[
+  \beta\,\text{C} + \text{O}_2 \rightarrow 2(\beta-1)\,\text{CO} + (2-\beta)\,\text{CO}_2
+  \]
+  \item Ecuación de Arthur (1951) para $\beta$:
+  \[
+  \beta = \frac{[\text{CO}]}{[\text{CO}_2]} = 52400\,e^{-6234/T}
+  \]
+  \item Las reacciones de \textbf{combustión son mucho más rápidas} que las de gasificación.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Efecto del Tamaño de Partícula y Comparación de Velocidades}
+\small
+\textbf{Comparación entre combustión y gasificación del char a 900°C:}
+
+\vspace{0.5em}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Tamaño (μm)} & \textbf{Comb. (min⁻¹)} & \textbf{Gasif. (min⁻¹)} & \textbf{Relación} \\
+\hline
+6350 & 0.648 & 0.042 & 15.4 \\
+841  & 5.04  & 0.317 & 15.9 \\
+74   & 55.9  & 0.975 & 57.3 \\
+\hline
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{Conclusiones:}
+\begin{itemize}
+  \item Partículas más pequeñas: mayor velocidad de reacción.
+  \item En combustión: la temperatura del char puede superar la del lecho.
+  \item En gasificación: la temperatura del char ≈ temperatura del lecho (por equilibrio térmico).
+\end{itemize}
+\end{frame}
+
+
+\end{document}
